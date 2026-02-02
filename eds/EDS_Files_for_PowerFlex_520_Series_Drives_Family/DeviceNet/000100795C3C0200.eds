@@ -1,0 +1,4288 @@
+$This is an EDS file created by Rockwell Automation's EDS File Wizard for drives.
+
+[File]
+    DescText   = "This is an EDS file for: PowerFlex 700AFE 400V  460A";
+    CreateDate = 01-09-2017;
+    CreateTime = 09:14:33;
+    ModDate    = 01-09-2017;
+    ModTime    = 09:14:33;
+    Revision   = 2.5;
+    HomeURL    = "http://www.ab.com/networks/eds/DN/000100795C3C0200.eds";
+
+[Device]
+    VendCode    = 0x0001;
+    VendName    = "Rockwell Automation/Allen-Bradley";
+    ProdType    = 0x0079;
+    ProdTypeStr = "DPI to DeviceNet";
+    ProdCode    = 0x5C3C;
+    MajRev      = 2;
+    MinRev      = 1;
+    ProdName    = "PowerFlex 700AFE 400V  460A";
+    Catalog     = "20YC460";
+    Icon        = "PF700H.ico";
+
+    1_EDS_AOP_Support = No;
+    1_AssemIndirectsSupport32BitDataTypes = Yes;
+
+[Device Classification]
+    Class1 = DeviceNet;
+
+[IO_Info]
+    1_COSetPathNotSupported = 1;		$ Supports Direct Path Setting = No
+    1_COSetSizeNotSupported = 1;		$ Supports Direct Size Setting = No
+
+    Default       = 0x0001;                 $ Default I/O = Polled Only
+
+    PollInfo      = 0x000D,                 $ Compatible with an I/O of: Cyclic, COS, and Polled
+                    1,                      $ Default Input = Input1
+                    1;                      $ Default Output = Output1
+
+    COSInfo       = 0x0005,                 $ Compatible with an I/O of: COS, and Polled
+                    1,                      $ Default Input = Input1
+                    1;                      $ Default Output = Output1
+
+    CyclicInfo    = 0x0009,                 $ Compatible with an I/O of: Cyclic, and Polled
+                    1,                      $ Default Input = Input1
+                    1;                      $ Default Output = Output1
+
+    PollInfoExa   = 0x000D,                 $ Compatible with an I/O of: Cyclic, COS, and Polled
+                    2,                      $ Default Input = Input2
+                    2;                      $ Default Output = Output2
+
+    COSInfoExa    = 0x0005,                 $ Compatible with an I/O of: COS, and Polled
+                    1,                      $ Default Input = Input1
+                    1;                      $ Default Output = Output1
+
+    CyclicInfoExa = 0x0009,                 $ Compatible with an I/O of: Cyclic, and Polled
+                    1,                      $ Default Input = Input1
+                    1;                      $ Default Output = Output1
+
+$ -- Input Connections --
+
+    Input1       = 4,                                          $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x000D,                                     $ Compatible I/O Type Mask = Cyclic, COS, and Polled
+                   "Logic Status & Feedback",                  $ Name String
+                   6,                                          $ Produced Connection Path Size
+                   "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+                   "";                                         $ Help String
+
+    Input2       = 8,                                          $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "Sts/Fdbk & 1 Datalink Produced",           $ Name String
+                   6,                                          $ Produced Connection Path Size
+                   "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+                   "";                                         $ Help String
+
+    Input3       = 12,                                         $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "Sts/Fdbk & 2 Datalinks Produced",          $ Name String
+                   6,                                          $ Produced Connection Path Size
+                   "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+                   "";                                         $ Help String
+
+    Input4       = 16,                                         $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "Sts/Fdbk & 3 Datalinks Produced",          $ Name String
+                   6,                                          $ Produced Connection Path Size
+                   "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+                   "";                                         $ Help String
+
+    Input5       = 20,                                         $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "Sts/Fdbk & 4 Datalinks Produced",          $ Name String
+                   6,                                          $ Produced Connection Path Size
+                   "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+                   "";                                         $ Help String
+
+    Input6       = 4,                                          $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "1 Datalink Produced",                      $ Name String
+                   6,                                          $ Produced Connection Path Size
+                   "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+                   "";                                         $ Help String
+
+    Input7       = 8,                                          $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "2 Datalinks Produced",                     $ Name String
+                   6,                                          $ Produced Connection Path Size
+                   "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+                   "";                                         $ Help String
+
+    Input8       = 12,                                         $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "3 Datalinks Produced",                     $ Name String
+                   6,                                          $ Produced Connection Path Size
+                   "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+                   "";                                         $ Help String
+
+    Input9       = 16,                                         $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "4 Datalinks Produced",                     $ Name String
+                   6,                                          $ Produced Connection Path Size
+                   "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+                   "";                                         $ Help String
+
+    InputExa1    = ,                                           $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x000D,                                     $ Compatible I/O Type Mask = Cyclic, COS, and Polled
+                   "Logic Status & Feedback",                  $ Name String
+                   ,                                           $ Produced Connection Path Size
+                   Assem1,                                     $ Produced Connection Path
+                   "";                                         $ Help String
+
+    InputExa2    = ,                                           $ Size of Produced Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   ,                                           $ Name String
+                   ,                                           $ Produced Connection Path Size
+                   VariantExa1,                                $ Produced Connection Path
+                   "";                                         $ Help String
+
+$ -- Output Connections --
+
+    Output1      = 4,                                          $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x000D,                                     $ Compatible I/O Type Mask = Cyclic, COS, and Polled
+                   "Logic Command & Reference",                $ Name String
+                   6,                                          $ Consumed Connection Path Size
+                   "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+                   "";                                         $ Help String
+
+    Output2      = 8,                                          $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "Cmd/Ref & 1 Datalink Consumed",            $ Name String
+                   6,                                          $ Consumed Connection Path Size
+                   "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+                   "";                                         $ Help String
+
+    Output3      = 12,                                         $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "Cmd/Ref & 2 Datalinks Consumed",           $ Name String
+                   6,                                          $ Consumed Connection Path Size
+                   "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+                   "";                                         $ Help String
+
+    Output4      = 16,                                         $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "Cmd/Ref & 3 Datalinks Consumed",           $ Name String
+                   6,                                          $ Consumed Connection Path Size
+                   "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+                   "";                                         $ Help String
+
+    Output5      = 20,                                         $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "Cmd/Ref & 4 Datalinks Consumed",           $ Name String
+                   6,                                          $ Consumed Connection Path Size
+                   "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+                   "";                                         $ Help String
+
+    Output6      = 4,                                          $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "1 Datalink Consumed",                      $ Name String
+                   6,                                          $ Consumed Connection Path Size
+                   "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+                   "";                                         $ Help String
+
+    Output7      = 8,                                          $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "2 Datalinks Consumed",                     $ Name String
+                   6,                                          $ Consumed Connection Path Size
+                   "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+                   "";                                         $ Help String
+
+    Output8      = 12,                                         $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "3 Datalinks Consumed",                     $ Name String
+                   6,                                          $ Consumed Connection Path Size
+                   "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+                   "";                                         $ Help String
+
+    Output9      = 16,                                         $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   "4 Datalinks Consumed",                     $ Name String
+                   6,                                          $ Consumed Connection Path Size
+                   "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+                   "";                                         $ Help String
+
+    OutputExa1   = ,                                           $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x000D,                                     $ Compatible I/O Type Mask = Cyclic, COS, and Polled
+                   "Logic Command & Reference",                $ Name String
+                   ,                                           $ Consumed Connection Path Size
+                   Assem41,                                    $ Consumed Connection Path
+                   "";                                         $ Help String
+
+    OutputExa2   = ,                                           $ Size of Consumed Connection Data in Bytes
+                   0,                                          $ Number of Significant Bits (0 = All)
+                   0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+                   ,                                           $ Name String
+                   ,                                           $ Consumed Connection Path Size
+                   VariantExa2,                                $ Consumed Connection Path
+                   "";                                         $ Help String
+
+[Assembly]
+    VariantExa1 =
+            ,,,,,                                              $ Name, Help String, Reserved
+            Param712,                                          $ Switch Selector
+            0x00, Assem32,                                     $ Selection Value, Selection Entry
+            0x01, Assem1,                                      $ Selection Value, Selection Entry
+            0x02, Assem2,                                      $ Selection Value, Selection Entry
+            0x03, Assem3,                                      $ Selection Value, Selection Entry
+            0x04, Assem4,                                      $ Selection Value, Selection Entry
+            0x05, Assem5,                                      $ Selection Value, Selection Entry
+            0x06, Assem6,                                      $ Selection Value, Selection Entry
+            0x07, Assem7,                                      $ Selection Value, Selection Entry
+            0x08, Assem8,                                      $ Selection Value, Selection Entry
+            0x09, Assem9,                                      $ Selection Value, Selection Entry
+            0x0A, Assem10,                                     $ Selection Value, Selection Entry
+            0x0B, Assem11,                                     $ Selection Value, Selection Entry
+            0x0C, Assem12,                                     $ Selection Value, Selection Entry
+            0x0D, Assem13,                                     $ Selection Value, Selection Entry
+            0x0E, Assem14,                                     $ Selection Value, Selection Entry
+            0x0F, Assem15,                                     $ Selection Value, Selection Entry
+            0x10, Assem16,                                     $ Selection Value, Selection Entry
+            0x11, Assem17,                                     $ Selection Value, Selection Entry
+            0x12, Assem18,                                     $ Selection Value, Selection Entry
+            0x13, Assem19,                                     $ Selection Value, Selection Entry
+            0x14, Assem20,                                     $ Selection Value, Selection Entry
+            0x15, Assem21,                                     $ Selection Value, Selection Entry
+            0x16, Assem22,                                     $ Selection Value, Selection Entry
+            0x17, Assem23,                                     $ Selection Value, Selection Entry
+            0x18, Assem24,                                     $ Selection Value, Selection Entry
+            0x19, Assem25,                                     $ Selection Value, Selection Entry
+            0x1A, Assem26,                                     $ Selection Value, Selection Entry
+            0x1B, Assem27,                                     $ Selection Value, Selection Entry
+            0x1C, Assem28,                                     $ Selection Value, Selection Entry
+            0x1D, Assem29,                                     $ Selection Value, Selection Entry
+            0x1E, Assem30,                                     $ Selection Value, Selection Entry
+            0x1F, Assem31;                                     $ Selection Value, Selection Entry
+
+    VariantExa2 =
+            ,,,,,                                              $ Name, Help String, Reserved
+            Param711,                                          $ Switch Selector
+            0x00, Assem72,                                     $ Selection Value, Selection Entry
+            0x01, Assem41,                                     $ Selection Value, Selection Entry
+            0x02, Assem42,                                     $ Selection Value, Selection Entry
+            0x03, Assem43,                                     $ Selection Value, Selection Entry
+            0x04, Assem44,                                     $ Selection Value, Selection Entry
+            0x05, Assem45,                                     $ Selection Value, Selection Entry
+            0x06, Assem46,                                     $ Selection Value, Selection Entry
+            0x07, Assem47,                                     $ Selection Value, Selection Entry
+            0x08, Assem48,                                     $ Selection Value, Selection Entry
+            0x09, Assem49,                                     $ Selection Value, Selection Entry
+            0x0A, Assem50,                                     $ Selection Value, Selection Entry
+            0x0B, Assem51,                                     $ Selection Value, Selection Entry
+            0x0C, Assem52,                                     $ Selection Value, Selection Entry
+            0x0D, Assem53,                                     $ Selection Value, Selection Entry
+            0x0E, Assem54,                                     $ Selection Value, Selection Entry
+            0x0F, Assem55,                                     $ Selection Value, Selection Entry
+            0x10, Assem56,                                     $ Selection Value, Selection Entry
+            0x11, Assem57,                                     $ Selection Value, Selection Entry
+            0x12, Assem58,                                     $ Selection Value, Selection Entry
+            0x13, Assem59,                                     $ Selection Value, Selection Entry
+            0x14, Assem60,                                     $ Selection Value, Selection Entry
+            0x15, Assem61,                                     $ Selection Value, Selection Entry
+            0x16, Assem62,                                     $ Selection Value, Selection Entry
+            0x17, Assem63,                                     $ Selection Value, Selection Entry
+            0x18, Assem64,                                     $ Selection Value, Selection Entry
+            0x19, Assem65,                                     $ Selection Value, Selection Entry
+            0x1A, Assem66,                                     $ Selection Value, Selection Entry
+            0x1B, Assem67,                                     $ Selection Value, Selection Entry
+            0x1C, Assem68,                                     $ Selection Value, Selection Entry
+            0x1D, Assem69,                                     $ Selection Value, Selection Entry
+            0x1E, Assem70,                                     $ Selection Value, Selection Entry
+            0x1F, Assem71;                                     $ Selection Value, Selection Entry
+
+    Assem1      = "Logic Status & Feedback",                   $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x00,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001;                              $ Feedback
+
+    Assem2      = "DL A Output",                               $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181;                                $ Datalink A2 Out
+
+    Assem3      = "Logic Status & Feedback & DL A Output",     $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181;                                $ Datalink A2 Out
+
+    Assem4      = "DL B Output",                               $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183;                                $ Datalink B2 Out
+
+    Assem5      = "Logic Status & Feedback & DL B Output",     $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183;                                $ Datalink B2 Out
+
+    Assem6      = "DL A Output & DL B Output",                 $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183;                                $ Datalink B2 Out
+
+    Assem7      = "Logic Status & Feedback & DL A Output & DL B Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183;                                $ Datalink B2 Out
+
+    Assem8      = "DL C Output",                               $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185;                                $ Datalink C2 Out
+
+    Assem9      = "Logic Status & Feedback & DL C Output",     $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185;                                $ Datalink C2 Out
+
+    Assem10     = "DL A Output & DL C Output",                 $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185;                                $ Datalink C2 Out
+
+    Assem11     = "Logic Status & Feedback & DL A Output & DL C Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185;                                $ Datalink C2 Out
+
+    Assem12     = "DL B Output & DL C Output",                 $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185;                                $ Datalink C2 Out
+
+    Assem13     = "Logic Status & Feedback & DL B Output & DL C Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185;                                $ Datalink C2 Out
+
+    Assem14     = "DL A Output & DL B Output & DL C Output",   $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185;                                $ Datalink C2 Out
+
+    Assem15     = "Logic Status & Feedback & DL A Output & DL B Output & DL C Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185;                                $ Datalink C2 Out
+
+    Assem16     = "DL D Output",                               $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem17     = "Logic Status & Feedback & DL D Output",     $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem18     = "DL A Output & DL D Output",                 $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem19     = "Logic Status & Feedback & DL A Output & DL D Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem20     = "DL B Output & DL D Output",                 $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem21     = "Logic Status & Feedback & DL B Output & DL D Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem22     = "DL A Output & DL B Output & DL D Output",   $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem23     = "Logic Status & Feedback & DL A Output & DL B Output & DL D Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem24     = "DL C Output & DL D Output",                 $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185,                                $ Datalink C2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem25     = "Logic Status & Feedback & DL C Output & DL D Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185,                                $ Datalink C2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem26     = "DL A Output & DL C Output & DL D Output",   $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185,                                $ Datalink C2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem27     = "Logic Status & Feedback & DL A Output & DL C Output & DL D Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185,                                $ Datalink C2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem28     = "DL B Output & DL C Output & DL D Output",   $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185,                                $ Datalink C2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem29     = "Logic Status & Feedback & DL B Output & DL C Output & DL D Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185,                                $ Datalink C2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem30     = "DL A Output & DL B Output & DL C Output & DL D Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185,                                $ Datalink C2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem31     = "Logic Status & Feedback & DL A Output & DL B Output & DL C Output & DL D Output", $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  20,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10000,                              $ Logic Status
+                  16, Param10001,                              $ Feedback
+                  16, Param180,                                $ Datalink A1 Out
+                  16, Param181,                                $ Datalink A2 Out
+                  16, Param182,                                $ Datalink B1 Out
+                  16, Param183,                                $ Datalink B2 Out
+                  16, Param184,                                $ Datalink C1 Out
+                  16, Param185,                                $ Datalink C2 Out
+                  16, Param186,                                $ Datalink D1 Out
+                  16, Param187;                                $ Datalink D2 Out
+
+    Assem32     = "None",                                      $ Name
+                  "20 07 24 01 30 04",                         $ Path
+                  0,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,;                                           $ Reserved
+
+    Assem41     = "Logic Command & Reference",                 $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003;                              $ Reference
+
+    Assem42     = "DL A Input",                                $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171;                                $ Datalink A2 In
+
+    Assem43     = "Logic Command & Reference & DL A Input",    $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171;                                $ Datalink A2 In
+
+    Assem44     = "DL B Input",                                $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173;                                $ Datalink B2 In
+
+    Assem45     = "Logic Command & Reference & DL B Input",    $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173;                                $ Datalink B2 In
+
+    Assem46     = "DL A Input & DL B Input",                   $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173;                                $ Datalink B2 In
+
+    Assem47     = "Logic Command & Reference & DL A Input & DL B Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173;                                $ Datalink B2 In
+
+    Assem48     = "DL C Input",                                $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175;                                $ Datalink C2 In
+
+    Assem49     = "Logic Command & Reference & DL C Input",    $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175;                                $ Datalink C2 In
+
+    Assem50     = "DL A Input & DL C Input",                   $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175;                                $ Datalink C2 In
+
+    Assem51     = "Logic Command & Reference & DL A Input & DL C Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175;                                $ Datalink C2 In
+
+    Assem52     = "DL B Input & DL C Input",                   $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175;                                $ Datalink C2 In
+
+    Assem53     = "Logic Command & Reference & DL B Input & DL C Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175;                                $ Datalink C2 In
+
+    Assem54     = "DL A Input & DL B Input & DL C Input",      $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175;                                $ Datalink C2 In
+
+    Assem55     = "Logic Command & Reference & DL A Input & DL B Input & DL C Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175;                                $ Datalink C2 In
+
+    Assem56     = "DL D Input",                                $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  4,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem57     = "Logic Command & Reference & DL D Input",    $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem58     = "DL A Input & DL D Input",                   $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem59     = "Logic Command & Reference & DL A Input & DL D Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem60     = "DL B Input & DL D Input",                   $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem61     = "Logic Command & Reference & DL B Input & DL D Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem62     = "DL A Input & DL B Input & DL D Input",      $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem63     = "Logic Command & Reference & DL A Input & DL B Input & DL D Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem64     = "DL C Input & DL D Input",                   $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  8,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175,                                $ Datalink C2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem65     = "Logic Command & Reference & DL C Input & DL D Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175,                                $ Datalink C2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem66     = "DL A Input & DL C Input & DL D Input",      $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175,                                $ Datalink C2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem67     = "Logic Command & Reference & DL A Input & DL C Input & DL D Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175,                                $ Datalink C2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem68     = "DL B Input & DL C Input & DL D Input",      $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  12,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175,                                $ Datalink C2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem69     = "Logic Command & Reference & DL B Input & DL C Input & DL D Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175,                                $ Datalink C2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem70     = "DL A Input & DL B Input & DL C Input & DL D Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  16,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175,                                $ Datalink C2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem71     = "Logic Command & Reference & DL A Input & DL B Input & DL C Input & DL D Input", $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  20,                                          $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,,                                           $ Reserved
+                  16, Param10002,                              $ Logic Command
+                  16, Param10003,                              $ Reference
+                  16, Param170,                                $ Datalink A1 In
+                  16, Param171,                                $ Datalink A2 In
+                  16, Param172,                                $ Datalink B1 In
+                  16, Param173,                                $ Datalink B2 In
+                  16, Param174,                                $ Datalink C1 In
+                  16, Param175,                                $ Datalink C2 In
+                  16, Param176,                                $ Datalink D1 In
+                  16, Param177;                                $ Datalink D2 In
+
+    Assem72     = "None",                                      $ Name
+                  "20 07 24 02 30 04",                         $ Path
+                  0,                                           $ Data Size
+                  0x40,                                        $ Descriptor
+                  ,;                                           $ Reserved
+
+[ParamClass]
+    MaxInst         = 729;
+    Descriptor      = 15;
+    CfgAssembly     = 0;
+
+[Params]
+    Param1 =
+            0,
+            7, "20 93 25 01 00 30 09",
+            0x74, 3, 2,
+            "Input Voltage", "VAC",
+            "",
+            0, 10000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param2 =
+            0,
+            7, "20 93 25 02 00 30 09",
+            0x74, 3, 2,
+            "AC Line Freq", "Hz",
+            "",
+            -630, 630, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param3 =
+            0,
+            7, "20 93 25 03 00 30 09",
+            0x74, 6, 4,
+            "Total Current", "Amps",
+            "",
+            0, 90000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param4 =
+            0,
+            7, "20 93 25 04 00 30 09",
+            0x74, 6, 4,
+            "Active Current", "Amps",
+            "",
+            -90000, 90000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param5 =
+            0,
+            7, "20 93 25 05 00 30 09",
+            0x74, 6, 4,
+            "Reactive Current", "Amps",
+            "",
+            -90000, 90000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param6 =
+            0,
+            7, "20 93 25 06 00 30 09",
+            0x74, 2, 2,
+            "Input Current R", "Amps",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param7 =
+            0,
+            7, "20 93 25 07 00 30 09",
+            0x74, 2, 2,
+            "Input Current S", "Amps",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param8 =
+            0,
+            7, "20 93 25 08 00 30 09",
+            0x74, 2, 2,
+            "Input Current T", "Amps",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param9 =
+            0,
+            7, "20 93 25 09 00 30 09",
+            0x74, 2, 2,
+            "I Imbalance", "%",
+            "",
+            0, 1000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param10 =
+            0,
+            7, "20 93 25 0A 00 30 09",
+            0x74, 2, 2,
+            "Ground Current", "Amps",
+            "",
+            0, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param11 =
+            0,
+            7, "20 93 25 0B 00 30 09",
+            0x74, 3, 2,
+            "DC Bus Volt", "VDC",
+            "",
+            0, 15000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param12 =
+            0,
+            7, "20 93 25 0C 00 30 09",
+            0x74, 6, 4,
+            "DC Bus Current", "Amps",
+            "",
+            -32768, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param13 =
+            0,
+            7, "20 93 25 0D 00 30 09",
+            0x74, 6, 4,
+            "AC Line kW", "kW",
+            "",
+            -90000, 90000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param14 =
+            0,
+            7, "20 93 25 0E 00 30 09",
+            0x74, 6, 4,
+            "AC Line kVar", "kVar",
+            "",
+            -90000, 90000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param15 =
+            0,
+            7, "20 93 25 0F 00 30 09",
+            0x74, 6, 4,
+            "AC Line kVA", "kVA",
+            "",
+            0, 90000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param16 =
+            0,
+            7, "20 93 25 10 00 30 09",
+            0x74, 3, 2,
+            "Power Factor", "   ",
+            "",
+            -100, 100, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param17 =
+            0,
+            7, "20 93 25 11 00 30 09",
+            0x74, 3, 2,
+            "Heatsink Temp", "°C",
+            "",
+            0, 200, 25,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param18 =
+            0,
+            7, "20 93 25 12 00 30 09",
+            0x74, 3, 2,
+            "Cmd DC Volt", "VDC",
+            "",
+            0, 15000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param19 =
+            0,
+            7, "20 93 25 13 00 30 09",
+            0x74, 9, 4,
+            "Motoring MWh", "MWh",
+            "",
+            0, 429496729, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param20 =
+            0,
+            7, "20 93 25 14 00 30 09",
+            0x74, 9, 4,
+            "Regen MWh", "MWh",
+            "",
+            0, 429496729, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param21 =
+            0,
+            7, "20 93 25 15 00 30 09",
+            0x74, 9, 4,
+            "Elapsed Run Time", "Hrs",
+            "",
+            0, 214748364, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param22 =
+            0,
+            7, "20 93 25 16 00 30 09",
+            0x74, 3, 2,
+            "Analog In1 Value", "Volt",
+            "",
+            0, 20000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param23 =
+            0,
+            7, "20 93 25 17 00 30 09",
+            0x74, 3, 2,
+            "Analog In2 Value", "Volt",
+            "",
+            0, 20000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param30 =
+            0,
+            7, "20 93 25 1E 00 30 09",
+            0x74, 6, 4,
+            "Rated kW", "kW",
+            "",
+            0, 300000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param31 =
+            0,
+            7, "20 93 25 1F 00 30 09",
+            0x74, 2, 2,
+            "Rated Volts", "VAC",
+            "",
+            0, 10000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param32 =
+            0,
+            7, "20 93 25 20 00 30 09",
+            0x74, 2, 2,
+            "Rated Amps", "Amps",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param33 =
+            0,
+            7, "20 93 25 21 00 30 09",
+            0x74, 2, 2,
+            "Control SW Ver", "   ",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param40 =
+            0,
+            7, "20 93 25 28 00 30 09",
+            0x64, 2, 2,
+            "Nom Input Volt", "VAC",
+            "",
+            200, 1000, 400,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param41 =
+            0,
+            7, "20 93 25 29 00 30 09",
+            0x64, 2, 2,
+            "PWM Frequency", "kHz",
+            "",
+            30, 160, 36,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param42 =
+            0,
+            7, "20 93 25 2A 00 30 09",
+            0x22, 8, 1,
+            "Modulation Type", "   ",
+            "",
+            0, 3, 2,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param43 =
+            0,
+            7, "20 93 25 2B 00 30 09",
+            0x64, 3, 2,
+            "Modulation Index", "%",
+            "",
+            20, 200, 100,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param45 =
+            0,
+            7, "20 93 25 2D 00 30 09",
+            0x64, 2, 2,
+            "RatedLineCurrent", "Amps",
+            "",
+            0, 65535, 310,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param46 =
+            0,
+            7, "20 93 25 2E 00 30 09",
+            0x22, 8, 1,
+            "Start/Stop Mode", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param47 =
+            0,
+            7, "20 93 25 2F 00 30 09",
+            0x64, 3, 2,
+            "Restart Delay", "ms",
+            "",
+            0, 32000, 220,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param48 =
+            0,
+            7, "20 93 25 30 00 30 09",
+            0x64, 3, 2,
+            "Stop Delay", "ms",
+            "",
+            0, 32000, 1000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param49 =
+            0,
+            7, "20 93 25 31 00 30 09",
+            0x64, 3, 2,
+            "Auto Stop Level", "%",
+            "",
+            -1000, 1000, -30,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param50 =
+            0,
+            7, "20 93 25 32 00 30 09",
+            0x64, 2, 2,
+            "Contact On Delay", "Secs",
+            "",
+            0, 1000, 40,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param51 =
+            0,
+            7, "20 93 25 33 00 30 09",
+            0x22, 1, 2,
+            "Control Options", "   ",
+            "",
+            0, 4287, 32,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param52 =
+            0,
+            7, "20 93 25 34 00 30 09",
+            0x22, 1, 2,
+            "AutoRstrt Config", "   ",
+            "",
+            0, 511, 21,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param53 =
+            0,
+            7, "20 93 25 35 00 30 09",
+            0x64, 8, 1,
+            "Auto Rstrt Tries", "   ",
+            "",
+            0, 10, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param54 =
+            0,
+            7, "20 93 25 36 00 30 09",
+            0x64, 2, 2,
+            "Auto Rstrt Delay", "Secs",
+            "",
+            5, 300, 10,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param60 =
+            0,
+            7, "20 93 25 3C 00 30 09",
+            0x22, 8, 1,
+            "DC Volt Ref Sel", "   ",
+            "",
+            0, 7, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param61 =
+            0,
+            7, "20 93 25 3D 00 30 09",
+            0x64, 2, 2,
+            "DC Volt Ref", "VDC",
+            "",
+            0, 15000, 5950,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param62 =
+            0,
+            7, "20 93 25 3E 00 30 09",
+            0x64, 3, 2,
+            "DC Volt Kp", "   ",
+            "",
+            0, 10000, 200,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param63 =
+            0,
+            7, "20 93 25 3F 00 30 09",
+            0x64, 2, 2,
+            "DC Volt Ki", "/s",
+            "",
+            0, 60000, 40,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 4;
+
+    Param64 =
+            0,
+            7, "20 93 25 40 00 30 09",
+            0x74, 3, 2,
+            "Active I Ref", "Amps",
+            "",
+            -32000, 32000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param65 =
+            0,
+            7, "20 93 25 41 00 30 09",
+            0x64, 3, 2,
+            "Reactive I Ref", "Amps",
+            "",
+            -32767, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param66 =
+            0,
+            7, "20 93 25 42 00 30 09",
+            0x64, 3, 2,
+            "Active I Kp", "   ",
+            "",
+            0, 4000, 400,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param67 =
+            0,
+            7, "20 93 25 43 00 30 09",
+            0x64, 2, 2,
+            "Active I Ki", "/s",
+            "",
+            0, 60000, 266,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 4;
+
+    Param68 =
+            0,
+            7, "20 93 25 44 00 30 09",
+            0x64, 3, 2,
+            "Reactive I Kp", "   ",
+            "",
+            0, 32000, 2000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param69 =
+            0,
+            7, "20 93 25 45 00 30 09",
+            0x64, 2, 2,
+            "Reactive I Ki", "/s",
+            "",
+            0, 20000, 40,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param70 =
+            0,
+            7, "20 93 25 46 00 30 09",
+            0x22, 8, 1,
+            "Reactive I Sel", "   ",
+            "",
+            0, 2, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param75 =
+            0,
+            7, "20 93 25 4B 00 30 09",
+            0x64, 2, 2,
+            "Motor Power Lmt", "%",
+            "",
+            1, 3000, 3000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param76 =
+            0,
+            7, "20 93 25 4C 00 30 09",
+            0x64, 3, 2,
+            "Regen Power Lmt", "%",
+            "",
+            -3000, -1, -3000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param77 =
+            0,
+            7, "20 93 25 4D 00 30 09",
+            0x64, 2, 2,
+            "Current Lmt Val", "Amps",
+            "",
+            0, 65000, 40,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param78 =
+            0,
+            7, "20 93 25 4E 00 30 09",
+            0x64, 2, 2,
+            "DC Bus Lo Alarm", "VDC",
+            "",
+            0, 20000, 3000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param79 =
+            0,
+            7, "20 93 25 4F 00 30 09",
+            0x64, 2, 2,
+            "DC Bus Hi Alarm", "VDC",
+            "",
+            0, 20000, 8000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param80 =
+            0,
+            7, "20 93 25 50 00 30 09",
+            0x74, 2, 2,
+            "DC Ref Lo Lmt", "VDC",
+            "",
+            0, 15000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param81 =
+            0,
+            7, "20 93 25 51 00 30 09",
+            0x74, 2, 2,
+            "DC Ref Hi Lmt", "VDC",
+            "",
+            0, 15000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param82 =
+            0,
+            7, "20 93 25 52 00 30 09",
+            0x64, 2, 2,
+            "Ground I Lvl", "%",
+            "",
+            0, 1000, 500,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param85 =
+            0,
+            7, "20 93 25 55 00 30 09",
+            0x64, 3, 2,
+            "Droop", "%",
+            "",
+            0, 10000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param86 =
+            0,
+            7, "20 93 25 56 00 30 09",
+            0x64, 8, 1,
+            "PWM synch", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param87 =
+            0,
+            7, "20 93 25 57 00 30 09",
+            0x64, 2, 2,
+            "Start Up Delay", "Secs",
+            "",
+            0, 30000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param90 =
+            0,
+            7, "20 93 25 5A 00 30 09",
+            0x22, 8, 1,
+            "Param Access Lvl", "   ",
+            "",
+            0, 2, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param91 =
+            0,
+            7, "20 93 25 5B 00 30 09",
+            0x22, 8, 1,
+            "Reset to Default", "   ",
+            "",
+            0, 3, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param92 =
+            0,
+            7, "20 93 25 5C 00 30 09",
+            0x22, 8, 1,
+            "Reset Meters", "   ",
+            "",
+            0, 3, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param93 =
+            0,
+            7, "20 93 25 5D 00 30 09",
+            0x22, 8, 1,
+            "Language", "   ",
+            "",
+            1, 1, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param94 =
+            0,
+            7, "20 93 25 5E 00 30 09",
+            0x32, 8, 1,
+            "Voltage Class", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param95 =
+            0,
+            7, "20 93 25 5F 00 30 09",
+            0x32, 1, 2,
+            "Cnvrtr Status 1", "   ",
+            "",
+            0, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param96 =
+            0,
+            7, "20 93 25 60 00 30 09",
+            0x32, 1, 2,
+            "Cnvrtr Status 2", "   ",
+            "",
+            0, 8967, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param97 =
+            0,
+            7, "20 93 25 61 00 30 09",
+            0x32, 1, 2,
+            "Cnvrtr Alarm 1", "   ",
+            "",
+            0, 2047, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param98 =
+            0,
+            7, "20 93 25 62 00 30 09",
+            0x32, 1, 2,
+            "Cnvrtr Alarm 2", "   ",
+            "",
+            0, 3, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param99 =
+            0,
+            7, "20 93 25 63 00 30 09",
+            0x32, 8, 1,
+            "DC Ref Source", "   ",
+            "",
+            0, 7, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param100 =
+            0,
+            7, "20 93 25 64 00 30 09",
+            0x32, 1, 2,
+            "Start Inhibits", "   ",
+            "",
+            0, 15999, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param101 =
+            0,
+            7, "20 93 25 65 00 30 09",
+            0x32, 8, 1,
+            "Last Stop Source", "   ",
+            "",
+            0, 9, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param102 =
+            0,
+            7, "20 93 25 66 00 30 09",
+            0x32, 1, 2,
+            "Dig In Status", "   ",
+            "",
+            0, 63, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param103 =
+            0,
+            7, "20 93 25 67 00 30 09",
+            0x32, 1, 2,
+            "Dig Out Status", "   ",
+            "",
+            0, 7, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param104 =
+            0,
+            7, "20 93 25 68 00 30 09",
+            0x74, 3, 2,
+            "Fault Frequency", "Hz",
+            "",
+            0, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param105 =
+            0,
+            7, "20 93 25 69 00 30 09",
+            0x74, 6, 4,
+            "Fault Total Curr", "Amps",
+            "",
+            0, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param106 =
+            0,
+            7, "20 93 25 6A 00 30 09",
+            0x74, 2, 2,
+            "Fault Bus Volts", "VDC",
+            "",
+            0, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param107 =
+            0,
+            7, "20 93 25 6B 00 30 09",
+            0x74, 3, 2,
+            "Fault Temp", "°C",
+            "",
+            0, 200, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param108 =
+            0,
+            7, "20 93 25 6C 00 30 09",
+            0x32, 1, 2,
+            "Status 1 @ Fault", "   ",
+            "",
+            0, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param109 =
+            0,
+            7, "20 93 25 6D 00 30 09",
+            0x32, 1, 2,
+            "Status 2 @ Fault", "   ",
+            "",
+            0, 8967, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param110 =
+            0,
+            7, "20 93 25 6E 00 30 09",
+            0x32, 1, 2,
+            "Alarm 1 @ Fault", "   ",
+            "",
+            0, 2047, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param111 =
+            0,
+            7, "20 93 25 6F 00 30 09",
+            0x32, 1, 2,
+            "Alarm 2 @ Fault", "   ",
+            "",
+            0, 3, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param112 =
+            0,
+            7, "20 93 25 70 00 30 09",
+            0x64, 2, 2,
+            "Testpoint 1 Sel", "   ",
+            "",
+            0, 65535, 499,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param113 =
+            0,
+            7, "20 93 25 71 00 30 09",
+            0x74, 3, 2,
+            "Testpoint 1 Data", "   ",
+            "",
+            -32767, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param114 =
+            0,
+            7, "20 93 25 72 00 30 09",
+            0x64, 2, 2,
+            "Testpoint 2 Sel", "   ",
+            "",
+            0, 65535, 499,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param115 =
+            0,
+            7, "20 93 25 73 00 30 09",
+            0x74, 3, 2,
+            "Testpoint 2 Data", "   ",
+            "",
+            -32767, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param116 =
+            0,
+            7, "20 93 25 74 00 30 09",
+            0x74, 3, 2,
+            "Cnvrtr OL Count", "%",
+            "",
+            0, 1000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param120 =
+            0,
+            7, "20 93 25 78 00 30 09",
+            0x22, 1, 2,
+            "Fault Config", "   ",
+            "",
+            0, 32767, 16384,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param121 =
+            0,
+            7, "20 93 25 79 00 30 09",
+            0x22, 8, 1,
+            "Fault Clear", "   ",
+            "",
+            0, 2, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param122 =
+            0,
+            7, "20 93 25 7A 00 30 09",
+            0x22, 8, 1,
+            "Fault Clear Mode", "   ",
+            "",
+            0, 1, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param123 =
+            0,
+            7, "20 93 25 7B 00 30 09",
+            0x74, 9, 4,
+            "Power Up Marker", "Hrs",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 4;
+
+    Param124 =
+            0,
+            7, "20 93 25 7C 00 30 09",
+            0x74, 2, 2,
+            "Fault 1 Code", "   ",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param125 =
+            0,
+            7, "20 93 25 7D 00 30 09",
+            0x74, 9, 4,
+            "Fault 1 Time", "Hrs",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 4;
+
+    Param126 =
+            0,
+            7, "20 93 25 7E 00 30 09",
+            0x74, 2, 2,
+            "Fault 2 Code", "   ",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param127 =
+            0,
+            7, "20 93 25 7F 00 30 09",
+            0x74, 9, 4,
+            "Fault 2 Time", "Hrs",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 4;
+
+    Param128 =
+            0,
+            7, "20 93 25 80 00 30 09",
+            0x74, 2, 2,
+            "Fault 3 Code", "   ",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param129 =
+            0,
+            7, "20 93 25 81 00 30 09",
+            0x74, 9, 4,
+            "Fault 3 Time", "Hrs",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 4;
+
+    Param130 =
+            0,
+            7, "20 93 25 82 00 30 09",
+            0x74, 2, 2,
+            "Fault 4 Code", "   ",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param131 =
+            0,
+            7, "20 93 25 83 00 30 09",
+            0x74, 9, 4,
+            "Fault 4 Time", "Hrs",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 4;
+
+    Param132 =
+            0,
+            7, "20 93 25 84 00 30 09",
+            0x22, 1, 2,
+            "Contact Off Cnfg", "   ",
+            "",
+            0, 989, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param133 =
+            0,
+            7, "20 93 25 85 00 30 09",
+            0x64, 3, 2,
+            "Cnvrtr OL Factor", "   ",
+            "",
+            50, 150, 100,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param135 =
+            0,
+            7, "20 93 25 87 00 30 09",
+            0x22, 1, 2,
+            "Alarm Config", "   ",
+            "",
+            0, 1023, 1023,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param136 =
+            0,
+            7, "20 93 25 88 00 30 09",
+            0x22, 8, 1,
+            "Alarm Clear", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param137 =
+            0,
+            7, "20 93 25 89 00 30 09",
+            0x74, 8, 1,
+            "Alarm 1 Code", "   ",
+            "",
+            0, 255, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param138 =
+            0,
+            7, "20 93 25 8A 00 30 09",
+            0x74, 8, 1,
+            "Alarm 2 Code", "   ",
+            "",
+            0, 255, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param139 =
+            0,
+            7, "20 93 25 8B 00 30 09",
+            0x74, 8, 1,
+            "Alarm 3 Code", "   ",
+            "",
+            0, 255, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param140 =
+            0,
+            7, "20 93 25 8C 00 30 09",
+            0x74, 8, 1,
+            "Alarm 4 Code", "   ",
+            "",
+            0, 255, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param150 =
+            0,
+            7, "20 93 25 96 00 30 09",
+            0x32, 8, 1,
+            "DPI Baud Rate", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param151 =
+            0,
+            7, "20 93 25 97 00 30 09",
+            0x32, 1, 2,
+            "Cnvrtr LogicRslt", "   ",
+            "",
+            0, 139, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param152 =
+            0,
+            7, "20 93 25 98 00 30 09",
+            0x22, 2, 2,
+            "DPI Port Sel", "   ",
+            "",
+            1, 5, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param153 =
+            0,
+            7, "20 93 25 99 00 30 09",
+            0x74, 3, 2,
+            "DPI Port Value", "VDC",
+            "",
+            0, 15000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param154 =
+            0,
+            7, "20 93 25 9A 00 30 09",
+            0x22, 24, 1,
+            "Logic Mask", "   ",
+            "",
+            0, 63, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param155 =
+            0,
+            7, "20 93 25 9B 00 30 09",
+            0x22, 24, 1,
+            "Fault Clr Mask", "   ",
+            "",
+            0, 63, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param156 =
+            0,
+            7, "20 93 25 9C 00 30 09",
+            0x32, 24, 1,
+            "Stop Owner", "   ",
+            "",
+            0, 63, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param157 =
+            0,
+            7, "20 93 25 9D 00 30 09",
+            0x32, 24, 1,
+            "Start Owner", "   ",
+            "",
+            0, 63, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param158 =
+            0,
+            7, "20 93 25 9E 00 30 09",
+            0x32, 24, 1,
+            "Fault Clr Owner", "   ",
+            "",
+            0, 63, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param170 =
+            0,
+            7, "20 93 25 AA 00 30 09",
+            0x464, 2, 2,
+            "Data In A1", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param171 =
+            0,
+            7, "20 93 25 AB 00 30 09",
+            0x464, 2, 2,
+            "Data In A2", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param172 =
+            0,
+            7, "20 93 25 AC 00 30 09",
+            0x464, 2, 2,
+            "Data In B1", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param173 =
+            0,
+            7, "20 93 25 AD 00 30 09",
+            0x464, 2, 2,
+            "Data In B2", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param174 =
+            0,
+            7, "20 93 25 AE 00 30 09",
+            0x464, 2, 2,
+            "Data In C1", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param175 =
+            0,
+            7, "20 93 25 AF 00 30 09",
+            0x464, 2, 2,
+            "Data In C2", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param176 =
+            0,
+            7, "20 93 25 B0 00 30 09",
+            0x464, 2, 2,
+            "Data In D1", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param177 =
+            0,
+            7, "20 93 25 B1 00 30 09",
+            0x464, 2, 2,
+            "Data In D2", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param180 =
+            0,
+            7, "20 93 25 B4 00 30 09",
+            0x464, 2, 2,
+            "Data Out A1", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param181 =
+            0,
+            7, "20 93 25 B5 00 30 09",
+            0x464, 2, 2,
+            "Data Out A2", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param182 =
+            0,
+            7, "20 93 25 B6 00 30 09",
+            0x464, 2, 2,
+            "Data Out B1", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param183 =
+            0,
+            7, "20 93 25 B7 00 30 09",
+            0x464, 2, 2,
+            "Data Out B2", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param184 =
+            0,
+            7, "20 93 25 B8 00 30 09",
+            0x464, 2, 2,
+            "Data Out C1", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param185 =
+            0,
+            7, "20 93 25 B9 00 30 09",
+            0x464, 2, 2,
+            "Data Out C2", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param186 =
+            0,
+            7, "20 93 25 BA 00 30 09",
+            0x464, 2, 2,
+            "Data Out D1", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param187 =
+            0,
+            7, "20 93 25 BB 00 30 09",
+            0x464, 2, 2,
+            "Data Out D2", "   ",
+            "",
+            0, 486, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param200 =
+            0,
+            7, "20 93 25 C8 00 30 09",
+            0x22, 1, 2,
+            "Anlg In Config", "   ",
+            "",
+            0, 3, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param201 =
+            0,
+            7, "20 93 25 C9 00 30 09",
+            0x64, 3, 2,
+            "Analog In1 Hi", "Volt",
+            "",
+            -10000, 20000, 10000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param202 =
+            0,
+            7, "20 93 25 CA 00 30 09",
+            0x64, 3, 2,
+            "Analog In1 Lo", "Volt",
+            "",
+            -10000, 20000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param203 =
+            0,
+            7, "20 93 25 CB 00 30 09",
+            0x22, 2, 2,
+            "Analog In1 Loss", "   ",
+            "",
+            0, 4, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param204 =
+            0,
+            7, "20 93 25 CC 00 30 09",
+            0x64, 3, 2,
+            "Analog In2 Hi", "Volt",
+            "",
+            -10000, 20000, 10000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param205 =
+            0,
+            7, "20 93 25 CD 00 30 09",
+            0x64, 3, 2,
+            "Analog In2 Lo", "Volt",
+            "",
+            -10000, 20000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param206 =
+            0,
+            7, "20 93 25 CE 00 30 09",
+            0x22, 2, 2,
+            "Analog In2 Loss", "   ",
+            "",
+            0, 4, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param207 =
+            0,
+            7, "20 93 25 CF 00 30 09",
+            0x22, 1, 2,
+            "Anlg Out Config", "   ",
+            "",
+            0, 3, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param208 =
+            0,
+            7, "20 93 25 D0 00 30 09",
+            0x22, 1, 2,
+            "Anlg Out Absolut", "   ",
+            "",
+            0, 3, 3,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param209 =
+            0,
+            7, "20 93 25 D1 00 30 09",
+            0x22, 8, 1,
+            "Analog Out1 Sel", "   ",
+            "",
+            0, 16, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param210 =
+            0,
+            7, "20 93 25 D2 00 30 09",
+            0x64, 3, 2,
+            "Analog Out1 Hi", "Volt",
+            "",
+            -10000, 20000, 10000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param211 =
+            0,
+            7, "20 93 25 D3 00 30 09",
+            0x64, 3, 2,
+            "Analog Out1 Lo", "Volt",
+            "",
+            -10000, 20000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param212 =
+            0,
+            7, "20 93 25 D4 00 30 09",
+            0x22, 8, 1,
+            "Analog Out2 Sel", "   ",
+            "",
+            0, 16, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param213 =
+            0,
+            7, "20 93 25 D5 00 30 09",
+            0x64, 3, 2,
+            "Analog Out2 Hi", "Volt",
+            "",
+            -10000, 20000, 10000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param214 =
+            0,
+            7, "20 93 25 D6 00 30 09",
+            0x64, 3, 2,
+            "Analog Out2 Lo", "Volt",
+            "",
+            -10000, 20000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param215 =
+            0,
+            7, "20 93 25 D7 00 30 09",
+            0x64, 6, 4,
+            "Anlg Out1 Scale", "VAC",
+            "",
+            0, 192000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param216 =
+            0,
+            7, "20 93 25 D8 00 30 09",
+            0x64, 6, 4,
+            "Anlg Out2 Scale", "Hz",
+            "",
+            0, 192000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 1;
+
+    Param217 =
+            0,
+            7, "20 93 25 D9 00 30 09",
+            0x64, 3, 2,
+            "Anlg Out1 Setpt", "Volt",
+            "",
+            -10000, 20000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param218 =
+            0,
+            7, "20 93 25 DA 00 30 09",
+            0x64, 3, 2,
+            "Anlg Out2 Setpt", "Volt",
+            "",
+            -10000, 20000, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 3;
+
+    Param221 =
+            0,
+            7, "20 93 25 DD 00 30 09",
+            0x22, 2, 2,
+            "Digital In1 Sel", "   ",
+            "",
+            0, 10, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param222 =
+            0,
+            7, "20 93 25 DE 00 30 09",
+            0x22, 2, 2,
+            "Digital In2 Sel", "   ",
+            "",
+            0, 10, 2,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param223 =
+            0,
+            7, "20 93 25 DF 00 30 09",
+            0x22, 2, 2,
+            "Digital In3 Sel", "   ",
+            "",
+            0, 10, 9,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param224 =
+            0,
+            7, "20 93 25 E0 00 30 09",
+            0x22, 2, 2,
+            "Digital In4 Sel", "   ",
+            "",
+            0, 10, 6,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param225 =
+            0,
+            7, "20 93 25 E1 00 30 09",
+            0x22, 2, 2,
+            "Digital In5 Sel", "   ",
+            "",
+            4, 4, 4,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param226 =
+            0,
+            7, "20 93 25 E2 00 30 09",
+            0x22, 2, 2,
+            "Digital In6 Sel", "   ",
+            "",
+            0, 10, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param227 =
+            0,
+            7, "20 93 25 E3 00 30 09",
+            0x22, 1, 2,
+            "Dig Out Setpt", "   ",
+            "",
+            0, 6, 6,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param228 =
+            0,
+            7, "20 93 25 E4 00 30 09",
+            0x32, 2, 2,
+            "Digital Out1 Sel", "   ",
+            "",
+            0, 25, 10,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param229 =
+            0,
+            7, "20 93 25 E5 00 30 09",
+            0x22, 2, 2,
+            "Digital Out2 Sel", "   ",
+            "",
+            0, 25, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param230 =
+            0,
+            7, "20 93 25 E6 00 30 09",
+            0x22, 2, 2,
+            "Dig Out2 Invert", "   ",
+            "",
+            0, 1, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param231 =
+            0,
+            7, "20 93 25 E7 00 30 09",
+            0x64, 3, 2,
+            "Dig Out2 OnTime", "Secs",
+            "",
+            0, 16300, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param232 =
+            0,
+            7, "20 93 25 E8 00 30 09",
+            0x64, 3, 2,
+            "Dig Out2 OffTime", "Secs",
+            "",
+            0, 16300, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param233 =
+            0,
+            7, "20 93 25 E9 00 30 09",
+            0x22, 2, 2,
+            "Digital Out3 Sel", "   ",
+            "",
+            0, 25, 4,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param234 =
+            0,
+            7, "20 93 25 EA 00 30 09",
+            0x22, 2, 2,
+            "Dig Out3 Invert", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param235 =
+            0,
+            7, "20 93 25 EB 00 30 09",
+            0x64, 3, 2,
+            "Dig Out3 OnTime", "Secs",
+            "",
+            0, 16300, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param236 =
+            0,
+            7, "20 93 25 EC 00 30 09",
+            0x64, 3, 2,
+            "Dig Out3 OffTime", "Secs",
+            "",
+            0, 16300, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param400 =
+            0,
+            7, "20 93 25 90 01 30 09",
+            0x74, 3, 2,
+            "DCVoltageRefer", "%",
+            "",
+            0, 12500, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param401 =
+            0,
+            7, "20 93 25 91 01 30 09",
+            0x74, 2, 2,
+            "DC Voltage", "V",
+            "",
+            0, 0, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param402 =
+            0,
+            7, "20 93 25 92 01 30 09",
+            0x74, 3, 2,
+            "iu_linecurrent", "   ",
+            "",
+            0, 0, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param568 =
+            0,
+            7, "20 93 25 38 02 30 09",
+            0x22, 8, 1,
+            "Start at PowerUp", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param592 =
+            0,
+            7, "20 93 25 50 02 30 09",
+            0x22, 1, 2,
+            "Save HIM Ref", "   ",
+            "",
+            0, 1, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param593 =
+            0,
+            7, "20 93 25 51 02 30 09",
+            0x22, 8, 1,
+            "Man Ref Preload", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param629 =
+            0,
+            7, "20 93 25 75 02 30 09",
+            0x32, 1, 2,
+            "Alarm 1 @ Fault", "   ",
+            "",
+            0, 16383, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param630 =
+            0,
+            7, "20 93 25 76 02 30 09",
+            0x32, 1, 2,
+            "Alarm 2 @ Fault", "   ",
+            "",
+            0, 16383, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param677 =
+            0,
+            7, "20 93 25 A5 02 30 09",
+            0x22, 24, 1,
+            "Start Mask", "   ",
+            "",
+            0, 127, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param678 =
+            0,
+            7, "20 93 25 A6 02 30 09",
+            0x22, 24, 1,
+            "Jog Mask", "   ",
+            "",
+            0, 127, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param679 =
+            0,
+            7, "20 93 25 A7 02 30 09",
+            0x22, 24, 1,
+            "Direction Mask", "   ",
+            "",
+            0, 127, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param680 =
+            0,
+            7, "20 93 25 A8 02 30 09",
+            0x22, 24, 1,
+            "Reference Mask", "   ",
+            "",
+            0, 127, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param681 =
+            0,
+            7, "20 93 25 A9 02 30 09",
+            0x22, 24, 1,
+            "Accel Mask", "   ",
+            "",
+            0, 127, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param682 =
+            0,
+            7, "20 93 25 AA 02 30 09",
+            0x22, 24, 1,
+            "Decel Mask", "   ",
+            "",
+            0, 127, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param684 =
+            0,
+            7, "20 93 25 AC 02 30 09",
+            0x22, 24, 1,
+            "MOP Mask", "   ",
+            "",
+            0, 127, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param685 =
+            0,
+            7, "20 93 25 AD 02 30 09",
+            0x22, 24, 1,
+            "Local Mask", "   ",
+            "",
+            0, 127, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param686 =
+            0,
+            7, "20 93 25 AE 02 30 09",
+            0x22, 24, 1,
+            "Manual Mask", "   ",
+            "",
+            0, 127, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param687 =
+            0,
+            7, "20 93 25 01 40 30 09",
+            0x74, 8, 1,
+            "DPI Port", "   ",
+            "",
+            0, 7, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param688 =
+            0,
+            7, "20 93 25 02 40 30 09",
+            0x32, 8, 1,
+            "DPI Data Rate", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param689 =
+            0,
+            7, "20 93 25 03 40 30 09",
+            0x64, 8, 1,
+            "DN Addr Cfg", "   ",
+            "",
+            0, 63, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param690 =
+            0,
+            7, "20 93 25 04 40 30 09",
+            0x74, 8, 1,
+            "DN Addr Act", "   ",
+            "",
+            0, 63, 63,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param691 =
+            0,
+            7, "20 93 25 05 40 30 09",
+            0x22, 8, 1,
+            "DN Rate Cfg", "   ",
+            "",
+            0, 3, 3,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param692 =
+            0,
+            7, "20 93 25 06 40 30 09",
+            0x32, 8, 1,
+            "DN Rate Act", "   ",
+            "",
+            0, 2, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param693 =
+            0,
+            7, "20 93 25 07 40 30 09",
+            0x32, 8, 1,
+            "Ref / Fdbk Size", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param694 =
+            0,
+            7, "20 93 25 08 40 30 09",
+            0x32, 8, 1,
+            "Datalink Size", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param695 =
+            0,
+            7, "20 93 25 09 40 30 09",
+            0x22, 8, 1,
+            "Reset Module", "   ",
+            "",
+            0, 2, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param696 =
+            0,
+            7, "20 93 25 0A 40 30 09",
+            0x22, 8, 1,
+            "Comm Flt Action", "   ",
+            "",
+            0, 4, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param697 =
+            0,
+            7, "20 93 25 0B 40 30 09",
+            0x22, 8, 1,
+            "Idle Flt Action", "   ",
+            "",
+            0, 4, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param698 =
+            0,
+            7, "20 93 25 0C 40 30 09",
+            0x32, 8, 1,
+            "DN Active Cfg", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param699 =
+            0,
+            7, "20 93 25 0D 40 30 09",
+            0x22, 24, 1,
+            "DPI I/O Cfg", "   ",
+            "",
+            0, 31, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param700 =
+            0,
+            7, "20 93 25 0E 40 30 09",
+            0x32, 24, 1,
+            "DPI I/O Act", "   ",
+            "",
+            0, 31, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param701 =
+            0,
+            7, "20 93 25 0F 40 30 09",
+            0x64, 1, 2,
+            "Flt Cfg Logic", "   ",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param702 =
+            0,
+            7, "20 93 25 10 40 30 09",
+            0x64, 9, 4,
+            "Flt Cfg Ref", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param703 =
+            0,
+            7, "20 93 25 11 40 30 09",
+            0x64, 9, 4,
+            "Flt Cfg A1 In", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param704 =
+            0,
+            7, "20 93 25 12 40 30 09",
+            0x64, 9, 4,
+            "Flt Cfg A2 In", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param705 =
+            0,
+            7, "20 93 25 13 40 30 09",
+            0x64, 9, 4,
+            "Flt Cfg B1 In", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param706 =
+            0,
+            7, "20 93 25 14 40 30 09",
+            0x64, 9, 4,
+            "Flt Cfg B2 In", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param707 =
+            0,
+            7, "20 93 25 15 40 30 09",
+            0x64, 9, 4,
+            "Flt Cfg C1 In", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param708 =
+            0,
+            7, "20 93 25 16 40 30 09",
+            0x64, 9, 4,
+            "Flt Cfg C2 In", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param709 =
+            0,
+            7, "20 93 25 17 40 30 09",
+            0x64, 9, 4,
+            "Flt Cfg D1 In", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param710 =
+            0,
+            7, "20 93 25 18 40 30 09",
+            0x64, 9, 4,
+            "Flt Cfg D2 In", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param711 =
+            0,
+            7, "20 93 25 19 40 30 09",
+            0x22, 24, 1,
+            "M-S Input", "   ",
+            "",
+            0, 31, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param712 =
+            0,
+            7, "20 93 25 1A 40 30 09",
+            0x22, 24, 1,
+            "M-S Output", "   ",
+            "",
+            0, 31, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param713 =
+            0,
+            7, "20 93 25 1B 40 30 09",
+            0x64, 1, 2,
+            "COS Status Mask", "   ",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param714 =
+            0,
+            7, "20 93 25 1C 40 30 09",
+            0x64, 9, 4,
+            "COS Fdbk Change", "   ",
+            "",
+            0, 4294967295, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param715 =
+            0,
+            7, "20 93 25 1D 40 30 09",
+            0x74, 2, 2,
+            "COS/Cyc Interval", "s",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param716 =
+            0,
+            7, "20 93 25 1E 40 30 09",
+            0x22, 2, 2,
+            "Peer A Input", "   ",
+            "",
+            0, 5, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param717 =
+            0,
+            7, "20 93 25 1F 40 30 09",
+            0x22, 2, 2,
+            "Peer B Input", "   ",
+            "",
+            0, 5, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param718 =
+            0,
+            7, "20 93 25 20 40 30 09",
+            0x64, 1, 2,
+            "Peer Cmd Mask", "   ",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param719 =
+            0,
+            7, "20 93 25 21 40 30 09",
+            0x64, 2, 2,
+            "Peer Ref Adjust", "%",
+            "",
+            0, 32767, 0,
+            20000, 32768, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param720 =
+            0,
+            7, "20 93 25 22 40 30 09",
+            0x22, 8, 1,
+            "Peer Flt Action", "   ",
+            "",
+            0, 4, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param721 =
+            0,
+            7, "20 93 25 23 40 30 09",
+            0x64, 8, 1,
+            "Peer Node to Inp", "   ",
+            "",
+            0, 63, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param722 =
+            0,
+            7, "20 93 25 24 40 30 09",
+            0x64, 2, 2,
+            "Peer Inp Timeout", "s",
+            "",
+            1, 18000, 1000,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param723 =
+            0,
+            7, "20 93 25 25 40 30 09",
+            0x22, 8, 1,
+            "Peer Inp Enable", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param724 =
+            0,
+            7, "20 93 25 26 40 30 09",
+            0x32, 8, 1,
+            "Peer Inp Status", "   ",
+            "",
+            0, 3, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param725 =
+            0,
+            7, "20 93 25 27 40 30 09",
+            0x22, 8, 1,
+            "Peer A Output", "   ",
+            "",
+            0, 9, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param726 =
+            0,
+            7, "20 93 25 28 40 30 09",
+            0x22, 8, 1,
+            "Peer B Output", "   ",
+            "",
+            0, 9, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param727 =
+            0,
+            7, "20 93 25 29 40 30 09",
+            0x22, 8, 1,
+            "Peer Out Enable", "   ",
+            "",
+            0, 1, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param728 =
+            0,
+            7, "20 93 25 2A 40 30 09",
+            0x64, 2, 2,
+            "Peer Out Time", "s",
+            "",
+            1, 1000, 100,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 2;
+
+    Param729 =
+            0,
+            7, "20 93 25 2B 40 30 09",
+            0x64, 2, 2,
+            "Peer Out Skip", "   ",
+            "",
+            1, 16, 1,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param10000 =
+            0,
+            ,,
+            0x232, 0x01, 2,
+            "Logic Status", "",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param10001 =
+            0,
+            ,,
+            0x274, 0x03, 2,
+            "Feedback", "",
+            "",
+            -32767, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param10002 =
+            0,
+            ,,
+            0x232, 0x01, 2,
+            "Logic Command", "",
+            "",
+            0, 65535, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+    Param10003 =
+            0,
+            ,,
+            0x274, 0x03, 2,
+            "Reference", "",
+            "",
+            -32767, 32767, 0,
+            1, 1, 1, 0,
+            0, 0, 0, 0, 0;
+
+[EnumPar]
+    Param42 =
+            "HW Modulator",
+            "Software 1",
+            "Software 2",
+            "Software 3";
+
+    Param46 =
+            "Normal",
+            "Auto";
+
+    Param51 =
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "5th Comp Off",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "DC RefFollow";
+
+    Param52 =
+            "Auxiliary In",
+            "DC UnderVolt",
+            "DC OverVolt",
+            "IGBTOverTemp",
+            "AC OverCurr",
+            "Ground Fault",
+            "Anlg In Loss",
+            "HeatsnkUndTp",
+            "LCL OverTemp";
+
+    Param60 =
+            "DC Volt Ref",
+            "Analog In 1",
+            "Analog In 2",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5";
+
+    Param70 =
+            "React I Ref",
+            "Analog In 1",
+            "Analog In 2";
+
+    Param90 =
+            "Basic",
+            "Advanced",
+            "Reserved";
+
+    Param91 =
+            "Ready",
+            "Factory",
+            "Low Voltage",
+            "High Voltage";
+
+    Param92 =
+            "Ready",
+            "Motoring MWh",
+            "Regen MWh",
+            "Elapsed Time";
+
+    Param93 =
+            "English";
+
+    Param94 =
+            "Low Voltage",
+            "High Voltage";
+
+    Param95 =
+            "Ready",
+            "Active",
+            "Motoring",
+            "Regenerating",
+            "In Precharge",
+            "Droop Active",
+            "Alarm",
+            "Faulted",
+            "At Reference",
+            "Mot CurLim",
+            "Regen CurLim",
+            "Cmd Delayed",
+            "DCVoltRefID0",
+            "DCVoltRefID1",
+            "DCVoltRefID2";
+
+    Param96 =
+            "Ready",
+            "Active",
+            "ModIndexLim",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "AutoRst Ctdn",
+            "AutoRst Act",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "DPI at 500 k";
+
+    Param97 =
+            "Prechrg Actv",
+            "DC UnderVolt",
+            "Anlg In Loss",
+            "LineSyncFail",
+            "HeatsinkOvTp",
+            "LCL Fan Stop",
+            "DCRefLowLim",
+            "DCRefHighLim",
+            "DCBusLoAlarm",
+            "DCBusHiAlarm",
+            "Overload";
+
+    Param98 =
+            "DigInConflct",
+            "Contact Fdbk";
+
+    Param99 =
+            "DC Volt Ref",
+            "Analog In 1",
+            "Analog In 2",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5";
+
+    Param100 =
+            "Fault",
+            "Type 2 Alarm",
+            "Enable",
+            "DC Bus Pchrg",
+            "Stop Assertd",
+            "Params Reset",
+            "Startup Actv",
+            "Reserved",
+            "Reserved",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5";
+
+    Param101 =
+            "Pwr Removed",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Reserved",
+            "Digital In",
+            "Fault",
+            "Not Enabled";
+
+    Param102 =
+            "Digital In1",
+            "Digital In2",
+            "Digital In3",
+            "Digital In4",
+            "Digital In5",
+            "Digital In6";
+
+    Param103 =
+            "DigitalOut 1",
+            "DigitalOut 2",
+            "DigitalOut 3";
+
+    Param108 =
+            "Ready",
+            "Active",
+            "Motoring",
+            "Regenerating",
+            "In Precharge",
+            "Droop Active",
+            "Alarm",
+            "Faulted",
+            "At Reference",
+            "Mot CurLim",
+            "Regen CurLim",
+            "Cmd Delayed",
+            "DCVoltRefID0",
+            "DCVoltRefID1",
+            "DCVoltRefID2";
+
+    Param109 =
+            "Ready",
+            "Active",
+            "ModIndexLim",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "AutoRst Ctdn",
+            "AutoRst Act",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "DPI at 500 k";
+
+    Param110 =
+            "Prechrg Actv",
+            "DC UnderVolt",
+            "Anlg In Loss",
+            "LineSyncFail",
+            "HeatsinkOvTp",
+            "LCL Fan Stop",
+            "DCRefLowLim",
+            "DCRefHighLim",
+            "DCBusLoAlarm",
+            "DCBusHiAlarm",
+            "Overload";
+
+    Param111 =
+            "DigInConflct",
+            "Contact Fdbk";
+
+    Param120 =
+            "Reserved",
+            "DC UnderVolt",
+            "Reserved",
+            "LineSyncFail",
+            "Overload",
+            "AutoResetLim",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Fan Cooling";
+
+    Param121 =
+            "Ready",
+            "Clear Faults",
+            "Clr Flt Que";
+
+    Param122 =
+            "Disabled",
+            "Enabled";
+
+    Param132 =
+            "Auxiliary In",
+            "Reserved",
+            "DC OverVolt",
+            "IGBTOverTemp",
+            "AC OverCurr",
+            "Reserved",
+            "Overload",
+            "HeatsinkOvTp",
+            "LCL OverTemp",
+            "All Fault";
+
+    Param135 =
+            "Prechrg Actv",
+            "DC UnderVolt",
+            "Anlg In Loss",
+            "LineSyncFail",
+            "HeatsinkOvTp",
+            "LCL Fan Stop",
+            "DCRefLowLim",
+            "DCRefHighLim",
+            "DCBusLoAlarm",
+            "DCBusHiAlarm";
+
+    Param136 =
+            "Ready",
+            "Clr Alrm Que";
+
+    Param150 =
+            "125 kbps",
+            "500 kbps";
+
+    Param151 =
+            "Stop",
+            "Start",
+            "Reserved",
+            "Clear Fault",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Cmd LogicOut";
+
+    Param152 =
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5";
+
+    Param154 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5";
+
+    Param155 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5";
+
+    Param156 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5";
+
+    Param157 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5";
+
+    Param158 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5";
+
+    Param200 =
+            "An1 0=V 1=mA",
+            "An2 0=V 1=mA";
+
+    Param203 =
+            "Disabled",
+            "Fault",
+            "Hold Input",
+            "Set Input Lo",
+            "Set Input Hi";
+
+    Param206 =
+            "Disabled",
+            "Fault",
+            "Hold Input",
+            "Set Input Lo",
+            "Set Input Hi";
+
+    Param207 =
+            "An1 0=V 1=mA",
+            "An2 0=V 1=mA";
+
+    Param208 =
+            "Analog Out1",
+            "Analog Out2";
+
+    Param209 =
+            "Input Volt",
+            "AC Line Freq",
+            "Total Curr",
+            "Active Curr",
+            "ReactiveCurr",
+            "Input Curr R",
+            "Input Curr S",
+            "Input Curr T",
+            "DC Bus Volt",
+            "DC Bus Curr",
+            "AC Line kW",
+            "AC Line kVar",
+            "AC Line kVA",
+            "Power Factor",
+            "DC Bus V Ref",
+            "Param Cntl",
+            "Testpt Data1";
+
+    Param212 =
+            "Input Volt",
+            "AC Line Freq",
+            "Total Curr",
+            "Active Curr",
+            "ReactiveCurr",
+            "Input Curr R",
+            "Input Curr S",
+            "Input Curr T",
+            "DC Bus Volt",
+            "DC Bus Curr",
+            "AC Line kW",
+            "AC Line kVar",
+            "AC Line kVA",
+            "Power Factor",
+            "DC Bus V Ref",
+            "Param Cntl",
+            "Testpt Data1";
+
+    Param221 =
+            "Not used",
+            "Run",
+            "Clear Fault",
+            "Aux Fault",
+            "LCL OverTemp",
+            "LCL Fan Stop",
+            "ContactorAck",
+            "Excl Link",
+            "Enable",
+            "Enable Mcont",
+            "Mcont Off";
+
+    Param222 =
+            "Not used",
+            "Run",
+            "Clear Fault",
+            "Aux Fault",
+            "LCL OverTemp",
+            "LCL Fan Stop",
+            "ContactorAck",
+            "Excl Link",
+            "Enable",
+            "Enable Mcont",
+            "Mcont Off";
+
+    Param223 =
+            "Not used",
+            "Run",
+            "Clear Fault",
+            "Aux Fault",
+            "LCL OverTemp",
+            "LCL Fan Stop",
+            "ContactorAck",
+            "Excl Link",
+            "Enable",
+            "Enable Mcont",
+            "Mcont Off";
+
+    Param224 =
+            "Not used",
+            "Run",
+            "Clear Fault",
+            "Aux Fault",
+            "LCL OverTemp",
+            "LCL Fan Stop",
+            "ContactorAck",
+            "Excl Link",
+            "Enable",
+            "Enable Mcont",
+            "Mcont Off";
+
+    Param225 =
+            "LCL OverTemp";
+
+    Param226 =
+            "Not used",
+            "Run",
+            "Clear Fault",
+            "Aux Fault",
+            "LCL OverTemp",
+            "LCL Fan Stop",
+            "ContactorAck",
+            "Excl Link",
+            "Enable",
+            "Enable Mcont",
+            "Mcont Off";
+
+    Param227 =
+            "Reserved",
+            "Net DigOut2",
+            "Net DigOut3";
+
+    Param228 =
+            "Not used",
+            "Fault",
+            "Alarm",
+            "Ready",
+            "Active",
+            "Motoring",
+            "Regenerating",
+            "In Precharge",
+            "CurrentLimit",
+            "At Reference",
+            "Contact Ctrl",
+            "ContactorAck",
+            "Charge Cntrl",
+            "Anlg In Loss",
+            "DC UnderVolt",
+            "DCRefLowLim",
+            "DCRefHighLim",
+            "Reserved",
+            "Input 1 Link",
+            "Input 2 Link",
+            "Input 3 Link",
+            "Input 4 Link",
+            "Input 5 Link",
+            "Input 6 Link",
+            "LogicCmdBit",
+            "Param Cntrl";
+
+    Param229 =
+            "Not used",
+            "Fault",
+            "Alarm",
+            "Ready",
+            "Active",
+            "Motoring",
+            "Regenerating",
+            "In Precharge",
+            "CurrentLimit",
+            "At Reference",
+            "Contact Ctrl",
+            "ContactorAck",
+            "Charge Cntrl",
+            "Anlg In Loss",
+            "DC UnderVolt",
+            "DCRefLowLim",
+            "DCRefHighLim",
+            "Reserved",
+            "Input 1 Link",
+            "Input 2 Link",
+            "Input 3 Link",
+            "Input 4 Link",
+            "Input 5 Link",
+            "Input 6 Link",
+            "LogicCmdBit",
+            "Param Cntrl";
+
+    Param230 =
+            "False",
+            "True";
+
+    Param233 =
+            "Not used",
+            "Fault",
+            "Alarm",
+            "Ready",
+            "Active",
+            "Motoring",
+            "Regenerating",
+            "In Precharge",
+            "CurrentLimit",
+            "At Reference",
+            "Contact Ctrl",
+            "ContactorAck",
+            "Charge Cntrl",
+            "Anlg In Loss",
+            "DC UnderVolt",
+            "DCRefLowLim",
+            "DCRefHighLim",
+            "Reserved",
+            "Input 1 Link",
+            "Input 2 Link",
+            "Input 3 Link",
+            "Input 4 Link",
+            "Input 5 Link",
+            "Input 6 Link",
+            "LogicCmdBit",
+            "Param Cntrl";
+
+    Param234 =
+            "False",
+            "True";
+
+    Param568 =
+            "Disabled",
+            "Enabled";
+
+    Param592 =
+            "Save HIM Ref";
+
+    Param593 =
+            "Disabled",
+            "Enabled";
+
+    Param629 =
+            "Prechrg Actv",
+            "UnderVoltage",
+            "Power Loss",
+            "Str At PwrUp",
+            "Anlg In Loss",
+            "IntDBRes OH",
+            "Reserved",
+            "Drv OL Lvl1",
+            "Drv OL Lvl2",
+            "Decel Inhib",
+            "Waking",
+            "Motor Therm",
+            "Phase Loss",
+            "Load Loss";
+
+    Param630 =
+            "DigIn CflctA",
+            "DigIn CflctB",
+            "DigIn CflctC",
+            "Bipolr Cflct",
+            "MtrTyp Cflct",
+            "NP Hz Cflct",
+            "MaxFrq Cflct",
+            "VHz NegSlope",
+            "IR Vlts Rang",
+            "Reserved",
+            "SpdRef Cflct",
+            "Ixo Vlt Rang",
+            "Sleep Config",
+            "TB Ref Cflct";
+
+    Param677 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Bit 6";
+
+    Param678 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Bit 6";
+
+    Param679 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Bit 6";
+
+    Param680 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Bit 6";
+
+    Param681 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Bit 6";
+
+    Param682 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Bit 6";
+
+    Param684 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Bit 6";
+
+    Param685 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Bit 6";
+
+    Param686 =
+            "Digital In",
+            "DPI Port 1",
+            "DPI Port 2",
+            "DPI Port 3",
+            "DPI Port 4",
+            "DPI Port 5",
+            "Bit 6";
+
+    Param688 =
+            "125kbps",
+            "500kbps";
+
+    Param691 =
+            "125kbps",
+            "250kbps",
+            "500kbps",
+            "Autobaud";
+
+    Param692 =
+            "125kbps",
+            "250kbps",
+            "500kbps";
+
+    Param693 =
+            "16-bit",
+            "32-bit";
+
+    Param694 =
+            "16-bit",
+            "32-bit";
+
+    Param695 =
+            "Ready",
+            "Reset Module",
+            "Set Defaults";
+
+    Param696 =
+            "Fault",
+            "Stop",
+            "Zero Data",
+            "Hold Last",
+            "Send Flt Cfg";
+
+    Param697 =
+            "Fault",
+            "Stop",
+            "Zero Data",
+            "Hold Last",
+            "Send Flt Cfg";
+
+    Param698 =
+            "Switches",
+            "EEPROM";
+
+    Param699 =
+            "Cmd/Ref",
+            "Datalink A",
+            "Datalink B",
+            "Datalink C",
+            "Datalink D";
+
+    Param700 =
+            "Cmd/Ref",
+            "Datalink A",
+            "Datalink B",
+            "Datalink C",
+            "Datalink D";
+
+    Param711 =
+            "Cmd/Ref",
+            "DL A Input",
+            "DL B Input",
+            "DL C Input",
+            "DL D Input";
+
+    Param712 =
+            "Status/Fdbk",
+            "DL A Output",
+            "DL B Output",
+            "DL C Output",
+            "DL D Output";
+
+    Param716 =
+            "Off",
+            "Cmd/Ref",
+            "DL A Input",
+            "DL B Input",
+            "DL C Input",
+            "DL D Input";
+
+    Param717 =
+            "Off",
+            "Cmd/Ref",
+            "DL A Input",
+            "DL B Input",
+            "DL C Input",
+            "DL D Input";
+
+    Param720 =
+            "Fault",
+            "Stop",
+            "Zero Data",
+            "Hold Last",
+            "Send Flt Cfg";
+
+    Param723 =
+            "Off",
+            "On";
+
+    Param724 =
+            "Off",
+            "Waiting",
+            "Running",
+            "Faulted";
+
+    Param725 =
+            "Off",
+            "Cmd/Ref",
+            "DL A Input",
+            "DL B Input",
+            "DL C Input",
+            "DL D Input",
+            "DL A Output",
+            "DL B Output",
+            "DL C Output",
+            "DL D Output";
+
+    Param726 =
+            "Off",
+            "Cmd/Ref",
+            "DL A Input",
+            "DL B Input",
+            "DL C Input",
+            "DL D Input",
+            "DL A Output",
+            "DL B Output",
+            "DL C Output",
+            "DL D Output";
+
+    Param727 =
+            "Off",
+            "On";
+
+    Param10000 =
+            "Ready",
+            "Running",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Faulted",
+            "Alarm",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved";
+
+    Param10002 =
+            "Stop",
+            "Start",
+            "Reserved",
+            "Fault Reset",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved";
+
+[Groups]
+    Group1 =
+            "Metering", 23, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23;
+
+    Group2 =
+            "Converter Data", 4, 30, 31, 32, 33;
+
+    Group3 =
+            "Control Modes", 11, 40, 41, 42, 43, 45, 46, 47, 48, 49, 50, 51;
+
+    Group4 =
+            "Restart Modes", 3, 52, 53, 54;
+
+    Group5 =
+            "Voltage Loop", 4, 60, 61, 62, 63;
+
+    Group6 =
+            "Current Loop", 7, 64, 65, 66, 67, 68, 69, 70;
+
+    Group7 =
+            "Limits", 8, 75, 76, 77, 78, 79, 80, 81, 82;
+
+    Group8 =
+            "Parallel Mode", 3, 85, 86, 87;
+
+    Group9 =
+            "Converter Memory", 5, 90, 91, 92, 93, 94;
+
+    Group10 =
+            "Diagnostics", 22, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116;
+
+    Group11 =
+            "Faults", 14, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133;
+
+    Group12 =
+            "Alarms", 6, 135, 136, 137, 138, 139, 140;
+
+    Group13 =
+            "Comm Control", 4, 150, 151, 152, 153;
+
+    Group14 =
+            "Masks and Owners", 5, 154, 155, 156, 157, 158;
+
+    Group15 =
+            "Datalinks", 16, 170, 171, 172, 173, 174, 175, 176, 177, 180, 181, 182, 183, 184, 185, 186, 187;
+
+    Group16 =
+            "Analog Inputs", 7, 200, 201, 202, 203, 204, 205, 206;
+
+    Group17 =
+            "Analog Outputs", 12, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218;
+
+    Group18 =
+            "Digital Inputs", 6, 221, 222, 223, 224, 225, 226;
+
+    Group19 =
+            "Digital Outputs", 10, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236;
+
+    Group20 =
+            "DeviceNet Module", 43, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729;

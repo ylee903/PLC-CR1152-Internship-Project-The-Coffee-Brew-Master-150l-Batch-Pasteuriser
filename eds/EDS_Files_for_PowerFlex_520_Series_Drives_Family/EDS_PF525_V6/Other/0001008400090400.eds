@@ -1,0 +1,30 @@
+
+[File]
+
+	DescText    = "PowerFlex 525";
+	CreateDate  = 10-13-2014;
+	CreateTime  = 12:00:00;
+	ModDate     = 10-13-2014;
+	ModTime     = 12:00:00;
+	Revision    = 1.1;
+	HomeURL     = "http://www.ab.com/networks/eds/xx/0001008400090400.eds";
+
+[Device]
+
+	VendCode    = 0x01;
+	VendName    = "Rockwell Automation - Allen-Bradley";
+	ProdType    = 0x0084;
+	ProdTypeStr = "Compact IO/DSI";
+	ProdCode    = 0x0009;
+	MajRev      = 4;
+	MinRev      = 1;
+	ProdName    = "PowerFlex 525";
+	Catalog     = "25B...";
+	Icon        = "PF525.ico";
+
+[Modular]
+
+	Width = 1;
+
+	Rack1 = 1,108,95,1,1,,,,
+		 1, 2, 3; $ Legal slots

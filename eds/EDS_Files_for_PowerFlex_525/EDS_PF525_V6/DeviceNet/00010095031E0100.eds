@@ -1,0 +1,993 @@
+$ DeviceNet EDS File
+$ This is an ODVA conformant file for this device with support for
+$ Rockwell Automation DeviceNet Premier Integration
+
+[File]
+        DescText = "This is an EDS file for a PowerFlex 52x via a 25-COMM-D card in multi-drive mode";
+        CreateDate = 08-19-2019;
+        CreateTime = 09:32:01;
+        ModDate = 08-19-2019;
+        ModTime = 09:32:01;
+        Revision = 1.1;
+        HomeURL = "http://www.ab.com/networks/eds/DN/00010095031E0100.eds";
+
+[Device]
+        VendCode = 1;
+        VendName = "Rockwell Automation - Allen-Bradley";
+        ProdType = 0x95;
+        ProdTypeStr = "HS-DSI to DeviceNet";
+        ProdCode = 0x31e;
+        MajRev = 0x1;
+        MinRev = 0x1;
+        ProdName = "25-COMM-D Multi-Drive";
+        Catalog = "25-COMM-D";
+        Icon = "PF52X.ico";
+        1_EDS_AOP_Support = "No";
+        
+
+[Device Classification]
+
+	Class1 = DeviceNet;
+
+
+[IO_Info]
+
+	1_COSetPathNotSupported = 1;		$ Supports Direct Path Setting = No
+	1_COSetSizeNotSupported = 1;		$ Supports Direct Size Setting = No
+
+	Default       = 0x0001;                 $ Default I/O = Polled
+
+	PollInfo      = 0x000D,                 $ Compatible with an I/O mix of Cyclic, COS, and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+	COSInfo       = 0x0005,                 $ Compatible with an I/O mix of Cos and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+	CyclicInfo    = 0x0009,                 $ Compatible with an I/O mix of Cyclic and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+	PollInfoExa   = 0x000D,                 $ Compatible with an I/O mix of Cyclic, COS, and Polled
+	                1,                      $ Default Input = Input2
+	                1;                      $ Default Output = Output2
+
+	COSInfoExa    = 0x0005,                 $ Compatible with an I/O mix of COS and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+	CyclicInfoExa = 0x0009,                 $ Compatible with an I/O mix of Cyclic and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+$ -- Input Connections --
+
+	Input1       = 4,                                          $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "One Drive Sts/Fdbk",                       $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	Input2       = 8,                                          $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Two Drives Sts/Fdbk",                      $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	Input3       = 12,                                         $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Three Drives Sts/Fdbk",                    $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	Input4       = 16,                                         $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Four Drives Sts/Fdbk",                     $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	Input5       = 20,                                         $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Five Drives Sts/Fdbk",                     $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	InputExa1    = ,                                           $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               ,                                           $ Name String
+	               ,                                           $ Produced Connection Path Size
+	               VariantExa1,                                $ Produced Connection Path
+	               "";                                         $ Help String
+
+$ -- Output Connections --
+
+	Output1      = 4,                                          $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "One Drive Cmd/Ref",                        $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	Output2      = 8,                                          $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Two Drives Cmd/Ref",                       $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	Output3      = 12,                                         $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Three Drives Cmd/Ref",                     $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	Output4      = 16,                                         $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Four Drives Cmd/Ref",                      $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	Output5      = 20,                                         $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Five Drives Cmd/Ref",                      $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	OutputExa1   = ,                                           $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               ,                                           $ Name String
+	               ,                                           $ Consumed Connection Path Size
+	               VariantExa2,                                $ Consumed Connection Path
+	               "";                                         $ Help String
+
+[Assembly]
+
+	VariantExa1 = 
+		,,,,,                                              $ Name, Help String, Reserved, Reserved, Reserved
+		Param175,                                          $ Switch Selector = DSI I/O Cfg
+		0x00, Assem1,                                      $ Selection Value, Selection Entry
+		0x01, Assem2,                                      $ Selection Value, Selection Entry
+		0x02, Assem3,                                      $ Selection Value, Selection Entry
+		0x03, Assem4,                                      $ Selection Value, Selection Entry
+		0x04, Assem5;                                      $ Selection Value, Selection Entry
+
+	VariantExa2 = 
+		,,,,,                                              $ Name, Help String, Reserved
+		Param175,                                          $ Switch Selector = DSI I/O Cfg
+		0x00, Assem41,                                     $ Selection Value, Selection Entry
+		0x01, Assem42,                                     $ Selection Value, Selection Entry
+		0x02, Assem43,                                     $ Selection Value, Selection Entry
+		0x03, Assem44,                                     $ Selection Value, Selection Entry
+		0x04, Assem45;                                     $ Selection Value, Selection Entry
+
+$ -- Produced Data
+
+	Assem1      = "One Drive Sts/Fdbk",                        $ Name
+	              "20 07 24 01 30 04",                         $ Path
+	              4,                                           $ Data Size
+	              0,                                           $ Descriptor
+	              ,,                                           $ Reserved
+	              16, Param10000,                              $ Logic Status - Drive 0
+	              16, Param10001;                              $ Feedback - Drive 0
+
+	Assem2      = "Two Drives Sts/Fdbk",
+	              "20 07 24 01 30 04",
+	              8,
+	              0x40,
+	              ,,
+	              16, Param10000,                              $ Logic Status - Drive 0
+	              16, Param10001,                              $ Feedback - Drive 0
+	              16, Param10002,                              $ Logic Status - Drive 1
+	              16, Param10003;                              $ Feedback - Drive 1
+
+	Assem3      = "Three Drives Sts/Fdbk",
+	              "20 07 24 01 30 04",
+	              12,
+	              0x40,
+	              ,,
+	              16, Param10000,                              $ Logic Status - Drive 0
+	              16, Param10001,                              $ Feedback - Drive 0
+	              16, Param10002,                              $ Logic Status - Drive 1
+	              16, Param10003,                              $ Feedback - Drive 1
+	              16, Param10004,                              $ Logic Status - Drive 2
+	              16, Param10005;                              $ Feedback - Drive 2
+
+	Assem4      = "Four Drives Sts/Fdbk",
+	              "20 07 24 01 30 04",
+	              16,
+	              0x40,
+	              ,,
+	              16, Param10000,                              $ Logic Status - Drive 0
+	              16, Param10001,                              $ Feedback - Drive 0
+	              16, Param10002,                              $ Logic Status - Drive 1
+	              16, Param10003,                              $ Feedback - Drive 1
+	              16, Param10004,                              $ Logic Status - Drive 2
+	              16, Param10005,                              $ Feedback - Drive 2
+	              16, Param10006,                              $ Logic Status - Drive 3
+	              16, Param10007;                              $ Feedback - Drive 3
+
+	Assem5      = "Five Drives Sts/Fdbk",
+	              "20 07 24 01 30 04",
+	              20,
+	              0x40,
+	              ,,
+	              16, Param10000,                              $ Logic Status - Drive 0
+	              16, Param10001,                              $ Feedback - Drive 0
+	              16, Param10002,                              $ Logic Status - Drive 1
+	              16, Param10003,                              $ Feedback - Drive 1
+	              16, Param10004,                              $ Logic Status - Drive 2
+	              16, Param10005,                              $ Feedback - Drive 2
+	              16, Param10006,                              $ Logic Status - Drive 3
+	              16, Param10007,                              $ Feedback - Drive 3
+	              16, Param10008,                              $ Logic Status - Drive 4
+	              16, Param10009;                              $ Feedback - Drive 4
+
+$ -- Consumed Data
+
+	Assem41     = "One Drive Cmd/Ref",                         $ Name
+	              "20 07 24 02 30 04",                         $ Path
+	              4,                                           $ Data Size
+	              0x40,                                        $ Descriptor
+	              ,,                                           $ Reserved
+	              16, Param10010,                              $ Logic Command - Drive 0
+	              16, Param10011;                              $ Reference - Drive 0
+
+	Assem42     = "Two Drives Cmd/Ref",
+	              "20 07 24 02 30 04",
+	              8,
+	              0x40,
+	              ,,
+	              16, Param10010,                              $ Logic Command - Drive 0
+	              16, Param10011,                              $ Reference - Drive 0
+	              16, Param10012,                              $ Logic Command - Drive 1
+	              16, Param10013;                              $ Reference - Drive 1
+
+	Assem43     = "Three Drives Cmd/Ref",
+	              "20 07 24 02 30 04",
+	              12,
+	              0x40,
+	              ,,
+	              16, Param10010,                              $ Logic Command - Drive 0
+	              16, Param10011,                              $ Reference - Drive 0
+	              16, Param10012,                              $ Logic Command - Drive 1
+	              16, Param10013,                              $ Reference - Drive 1
+	              16, Param10014,                              $ Logic Command - Drive 2
+	              16, Param10015;                              $ Reference - Drive 2
+
+	Assem44     = "Four Drives Cmd/Ref",
+	              "20 07 24 02 30 04",
+	              16,
+	              0x40,
+	              ,,
+	              16, Param10010,                              $ Logic Command - Drive 0
+	              16, Param10011,                              $ Reference - Drive 0
+	              16, Param10012,                              $ Logic Command - Drive 1
+	              16, Param10013,                              $ Reference - Drive 1
+	              16, Param10014,                              $ Logic Command - Drive 2
+	              16, Param10015,                              $ Reference - Drive 2
+	              16, Param10016,                              $ Logic Command - Drive 3
+	              16, Param10017;                              $ Reference - Drive 3
+
+	Assem45     = "Five Drives Cmd/Ref",
+	              "20 07 24 02 30 04",
+	              20,
+	              0x40,
+	              ,,
+	              16, Param10010,                              $ Logic Command - Drive 0
+	              16, Param10011,                              $ Reference - Drive 0
+	              16, Param10012,                              $ Logic Command - Drive 1
+	              16, Param10013,                              $ Reference - Drive 1
+	              16, Param10014,                              $ Logic Command - Drive 2
+	              16, Param10015,                              $ Reference - Drive 2
+	              16, Param10016,                              $ Logic Command - Drive 3
+	              16, Param10017,                              $ Reference - Drive 3
+	              16, Param10018,                              $ Logic Command - Drive 4
+	              16, Param10019;                              $ Reference - Drive 4
+
+[ParamClass]
+
+	Revision = 1;
+	MaxInst = 23;
+	Number_Of_Static_Instances = 23;
+	Max_Number_Of_Dynamic_Instances = 0;
+	Descriptor = 11;
+	CfgAssembly = 0;
+
+[Params]
+
+ Param1 =
+	0,
+	7,"20 93 25 01 40 30 09",
+	0x32,199,2,
+	"MultiDrv Sel    ","    ",
+	"", 
+	0,2,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param2 =
+	0,
+	7,"20 93 25 02 40 30 09",
+	0x64,199,2,
+	"DLs From Net Cfg","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param3 =
+	0,
+	7,"20 93 25 03 40 30 09",
+	0x74,199,2,
+	"DLs From Net Act","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param4 =
+	0,
+	7,"20 93 25 04 40 30 09",
+	0x64,199,2,
+	"DLs To Net Cfg  ","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param5 =
+	0,
+	7,"20 93 25 05 40 30 09",
+	0x74,199,2,
+	"DLs To Net Act  ","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param6 =
+	0,
+	7,"20 93 25 06 40 30 09",
+	0x32,199,2,
+	"Net Addr Src    ","    ",
+	"", 
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param7 =
+	0,
+	7,"20 93 25 07 40 30 09",
+	0x64,199,2,
+	"Net Addr Cfg    ","    ",
+	"", 
+	0,63,63,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param8 =
+	0,
+	7,"20 93 25 08 40 30 09",
+	0x74,199,2,
+	"Net Addr Act    ","    ",
+	"", 
+	0,63,63,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param9 =
+	0,
+	7,"20 93 25 09 40 30 09",
+	0x22,199,2,
+	"Net Rate Cfg    ","    ",
+	"", 
+	0,3,3,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param10 =
+	0,
+	7,"20 93 25 0A 40 30 09",
+	0x32,199,2,
+	"Net Rate Act    ","    ",
+	"", 
+	0,3,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param11 =
+	0,
+	7,"20 93 25 0B 40 30 09",
+	0x20,210,2,
+	"COS Status Mask ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param12 =
+	0,
+	7,"20 93 25 0C 40 30 09",
+	0x64,199,2,
+	"COS Fdbk Change ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param13 =
+	0,
+	7,"20 93 25 0D 40 30 09",
+	0x74,199,2,
+	"COS/Cyc Interval","s   ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,3;
+
+ Param14 =
+	0,
+	7,"20 93 25 0E 40 30 09",
+	0x22,199,2,
+	"Reset Module    ","    ",
+	"", 
+	0,2,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param15 =
+	0,
+	7,"20 93 25 0F 40 30 09",
+	0x22,199,2,
+	"Comm Flt Action ","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param16 =
+	0,
+	7,"20 93 25 10 40 30 09",
+	0x22,199,2,
+	"Idle Flt Action ","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param17 =
+	0,
+	7,"20 93 25 11 40 30 09",
+	0x20,210,2,
+	"Flt Cfg Logic   ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param18 =
+	0,
+	7,"20 93 25 12 40 30 09",
+	0x64,199,2,
+	"Flt Cfg Ref     ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param19 =
+	0,
+	7,"20 93 25 13 40 30 09",
+	0x64,199,2,
+	"Flt Cfg DL 1    ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param20 =
+	0,
+	7,"20 93 25 14 40 30 09",
+	0x64,199,2,
+	"Flt Cfg DL 2    ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param21 =
+	0,
+	7,"20 93 25 15 40 30 09",
+	0x64,199,2,
+	"Flt Cfg DL 3    ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param22 =
+	0,
+	7,"20 93 25 16 40 30 09",
+	0x64,199,2,
+	"Flt Cfg DL 4    ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param23 =
+	0,
+	7,"20 93 25 17 40 30 09",
+	0x32,210,2,
+	"DSI I/O Act     ","    ",
+	"", 
+	0,31,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param175 =
+	0,
+	7,"20 93 25 AF 00 30 09",
+	0x22,199,2,
+	"DSI I/O Cfg     ","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param10000 = 
+        0,
+        , ,
+        0x0A32, 210, 2,
+        "Drv 0 Logic Sts", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10001 = 
+        0,
+        , ,
+        0x0A74, 199, 2,
+        "Drv 0 Feedback", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10002 = 
+        0,
+        , ,
+        0x0A32, 210, 2,
+        "Drv 1 Logic Sts", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10003 = 
+        0,
+        , ,
+        0x0A74, 199, 2,
+        "Drv 1 Feedback", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10004 = 
+        0,
+        , ,
+        0x0A32, 210, 2,
+        "Drv 2 Logic Sts", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10005 = 
+        0,
+        , ,
+        0x0A74, 199, 2,
+        "Drv 2 Feedback", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10006 = 
+        0,
+        , ,
+        0x0A32, 210, 2,
+        "Drv 3 Logic Sts", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10007 = 
+        0,
+        , ,
+        0x0A74, 199, 2,
+        "Drv 3 Feedback", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10008 = 
+        0,
+        , ,
+        0x0A32, 210, 2,
+        "Drv 4 Logic Sts", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10009 = 
+        0,
+        , ,
+        0x0A74, 199, 2,
+        "Drv 4 Feedback", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10010 = 
+        0,
+        , ,
+        0x0A22, 210, 2,
+        "Drv 0 Logic Cmd", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10011 = 
+        0,
+        , ,
+        0x0A60, 199, 2,
+        "Drv 0 Reference", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10012 = 
+        0,
+        , ,
+        0x0A22, 210, 2,
+        "Drv 1 Logic Cmd", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10013 = 
+        0,
+        , ,
+        0x0A60, 199, 2,
+        "Drv 1 Reference", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10014 = 
+        0,
+        , ,
+        0x0A22, 210, 2,
+        "Drv 2 Logic Cmd", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10015 = 
+        0,
+        , ,
+        0x0A60, 199, 2,
+        "Drv 2 Reference", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10016 = 
+        0,
+        , ,
+        0x0A22, 210, 2,
+        "Drv 3 Logic Cmd", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10017 = 
+        0,
+        , ,
+        0x0A60, 199, 2,
+        "Drv 3 Reference", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10018 = 
+        0,
+        , ,
+        0x0A22, 210, 2,
+        "Drv 4 Logic Cmd", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10019 = 
+        0,
+        , ,
+        0x0A60, 199, 2,
+        "Drv 4 Reference", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+[EnumPar]
+
+ Param1 = 
+	"Disabled    ",
+	"Network Opt ",
+	"EtherNet/IP ";
+
+ Param6 = 
+	"Switches    ",
+	"Parameters  ";
+
+ Param9 = 
+	"125kbps     ",
+	"250kbps     ",
+	"500kbps     ",
+	"Autobaud    ";
+
+ Param10 = 
+	"125kbps     ",
+	"250kbps     ",
+	"500kbps     ",
+	"Autobauding ";
+
+ Param14 = 
+	"Ready       ",
+	"Reset Module",
+	"Set Defaults";
+
+ Param15 = 
+	"Fault       ",
+	"Stop        ",
+	"Zero Data   ",
+	"Hold Last   ",
+	"Send Flt Cfg";
+
+ Param16 = 
+	"Fault       ",
+	"Stop        ",
+	"Zero Data   ",
+	"Hold Last   ",
+	"Send Flt Cfg";
+
+ Param23 = 
+	"Drive 0 Actv",
+	"Drive 1 Actv",
+	"Drive 2 Actv",
+	"Drive 3 Actv",
+	"Drive 4 Actv";
+
+ Param175 = 
+	"Drive 0     ",
+	"Drive 0-1   ",
+	"Drive 0-2   ",
+	"Drive 0-3   ",
+	"Drive 0-4   ";
+
+ Param10000 =
+	"Ready",
+	"Active",
+	"CommandDir",
+	"ActualDir",
+	"Accelerating",
+	"Decelerating",
+	"Bit_06",
+	"Faulted",
+	"AtReference",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";
+
+ Param10002 =
+	"Ready",
+	"Active",
+	"CommandDir",
+	"ActualDir",
+	"Accelerating",
+	"Decelerating",
+	"Bit_06",
+	"Faulted",
+	"AtReference",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";
+
+ Param10004 =
+	"Ready",
+	"Active",
+	"CommandDir",
+	"ActualDir",
+	"Accelerating",
+	"Decelerating",
+	"Bit_06",
+	"Faulted",
+	"AtReference",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";
+
+ Param10006 =
+	"Ready",
+	"Active",
+	"CommandDir",
+	"ActualDir",
+	"Accelerating",
+	"Decelerating",
+	"Bit_06",
+	"Faulted",
+	"AtReference",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";
+
+ Param10008 =
+	"Ready",
+	"Active",
+	"CommandDir",
+	"ActualDir",
+	"Accelerating",
+	"Decelerating",
+	"Bit_06",
+	"Faulted",
+	"AtReference",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";
+
+ Param10010 =
+	"Stop",
+	"Start",
+	"Jog",
+	"Clear Faults",
+	"Forward",
+	"Reverse",
+	"Bit_06",
+	"Bit_07",
+	"Bit_08",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";
+
+ Param10012 =
+	"Stop",
+	"Start",
+	"Jog",
+	"Clear Faults",
+	"Forward",
+	"Reverse",
+	"Bit_06",
+	"Bit_07",
+	"Bit_08",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";
+
+ Param10014 =
+	"Stop",
+	"Start",
+	"Jog",
+	"Clear Faults",
+	"Forward",
+	"Reverse",
+	"Bit_06",
+	"Bit_07",
+	"Bit_08",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";
+
+ Param10016 =
+	"Stop",
+	"Start",
+	"Jog",
+	"Clear Faults",
+	"Forward",
+	"Reverse",
+	"Bit_06",
+	"Bit_07",
+	"Bit_08",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";
+
+ Param10018 =
+	"Stop",
+	"Start",
+	"Jog",
+	"Clear Faults",
+	"Forward",
+	"Reverse",
+	"Bit_06",
+	"Bit_07",
+	"Bit_08",
+	"Bit_09",
+	"Bit_10",
+	"Bit_11",
+	"Bit_12",
+	"Bit_13",
+	"Bit_14",
+	"Bit_15";

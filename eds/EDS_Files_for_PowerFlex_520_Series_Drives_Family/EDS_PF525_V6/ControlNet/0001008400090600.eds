@@ -1,0 +1,33 @@
+$ EZ-EDS Version 3.23.1.20171205 Generated Electronic Data Sheet
+
+[File]
+
+        DescText = "PowerFlex 525";
+        CreateDate = 08-19-2019;
+        CreateTime = 09:01:50;
+        ModDate = 08-19-2019;
+        ModTime = 09:01:50;
+        Revision = 1.1;
+        HomeURL = "http://www.ab.com/networks/eds/xx/0001008400090600.eds";
+
+[Device]
+
+        VendCode = 1;
+        VendName = "Rockwell Automation - Allen-Bradley";
+        ProdType = 132;
+        ProdTypeStr = "Compact IO/DSI";
+        ProdCode = 9;
+        MajRev = 6;
+        MinRev = 1;
+        ProdName = "PowerFlex 525";
+        Catalog = "25B...";
+        Icon = "PF525.ico";
+
+[Modular]
+
+        Width = 1;
+
+        Rack1 =
+                1,108,95,1,1,,,,
+                1,2,3;                  $ Legal slots
+

@@ -1,0 +1,4266 @@
+$ DeviceNet EDS File
+$ This is an ODVA conformant file for this device with support for
+$ Rockwell Automation DeviceNet Premier Integration
+
+[File]
+        DescText = "This is an EDS file for a PowerFlex 523 via a 22-COMM-D card in single-drive mode";
+        CreateDate = 05-13-2016;
+        CreateTime = 13:54:52;
+        ModDate = 05-13-2016;
+        ModTime = 13:54:52;
+        Revision = 1.1;
+        HomeURL = "http://www.ab.com/networks/eds/DN/0001007EC2080300.eds";
+
+[Device]
+        VendCode = 0x1;
+        VendName = "Rockwell Automation - Allen-Bradley";
+        ProdType = 0x7e;
+        ProdTypeStr = "DSI to DeviceNet";
+        ProdCode = 0xc208;
+        MajRev = 0x3;
+        MinRev = 0x1;
+        ProdName = "PowerFlex 523 3P 460V    .50HP";
+        Catalog = "25A-D1P4...";
+        Icon = "PF523.ico";
+        1_EDS_AOP_Support = "No";
+
+[Device Classification]
+
+	Class1 = DeviceNet;
+
+[IO_Info]
+
+	1_COSetPathNotSupported = 1;		$ Supports Direct Path Setting = No
+	1_COSetSizeNotSupported = 1;		$ Supports Direct Size Setting = No
+
+	Default       = 0x0001;                 $ Default I/O = Polled
+
+	PollInfo      = 0x000D,                 $ Compatible with an I/O mix of Cyclic, COS, and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+	COSInfo       = 0x0005,                 $ Compatible with an I/O mix of Cos and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+	CyclicInfo    = 0x0009,                 $ Compatible with an I/O mix of Cyclic and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+	PollInfoExa   = 0x000D,                 $ Compatible with an I/O mix of Cyclic, COS, and Polled
+	                2,                      $ Default Input = Input2
+	                2;                      $ Default Output = Output2
+
+	COSInfoExa    = 0x0005,                 $ Compatible with an I/O mix of COS and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+	CyclicInfoExa = 0x0009,                 $ Compatible with an I/O mix of Cyclic and Polled
+	                1,                      $ Default Input = Input1
+	                1;                      $ Default Output = Output1
+
+$ -- Input Connections --
+
+	Input1       = 4,                                          $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Logic Status & Feedback",                  $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	Input2       = 6,                                          $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+	               "Sts/Fdbk & 1 Datalink Produced",           $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	Input3       = 8,                                          $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+	               "Sts/Fdbk & 2 Datalinks Produced",          $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	Input4       = 10,                                         $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+	               "Sts/Fdbk & 3 Datalinks Produced",          $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	Input5       = 12,                                         $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+	               "Sts/Fdbk & 4 Datalinks Produced",          $ Name String
+	               6,                                          $ Produced Connection Path Size
+	               "20 07 24 01 30 04",                        $ Produced Connection Path = Instance 1 of Register Object
+	               "";                                         $ Help String
+
+	InputExa1    = ,                                           $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Logic Status & Feedback",                  $ Name String
+	               ,                                           $ Produced Connection Path Size
+	               Assem1,                                     $ Produced Connection Path
+	               "";                                         $ Help String
+
+	InputExa2    = ,                                           $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled
+	               ,                                           $ Name String
+	               ,                                           $ Produced Connection Path Size
+	               VariantExa1,                                $ Produced Connection Path
+	               "";                                         $ Help String
+
+$ -- Output Connections --
+
+	Output1      = 4,                                          $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Logic Command & Reference",                $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	Output2      = 6,                                          $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+	               "Cmd/Ref & 1 Datalink Consumed",            $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	Output3      = 8,                                          $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+	               "Cmd/Ref & 2 Datalinks Consumed",           $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	Output4      = 10,                                         $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+	               "Cmd/Ref & 3 Datalinks Consumed",           $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	Output5      = 12,                                         $ Size of Consumed Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled Only
+	               "Cmd/Ref & 4 Datalinks Consumed",           $ Name String
+	               6,                                          $ Consumed Connection Path Size
+	               "20 07 24 02 30 04",                        $ Consumed Connection Path = Instance 2 of Register Object
+	               "";                                         $ Help String
+
+	OutputExa1   = ,                                           $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x000d,                                     $ Compatible I/O Type Mask = Cyclic, COS and Polled
+	               "Logic Command & Reference",                $ Name String
+	               ,                                           $ Consumed Connection Path Size
+	               Assem41,                                    $ Consumed Connection Path
+	               "";                                         $ Help String
+
+	OutputExa2   = ,                                           $ Size of Produced Connection Data in Bytes
+	               0,                                          $ Number of Significant Bits (0 = All)
+	               0x0001,                                     $ Compatible I/O Type Mask = Polled
+	               ,                                           $ Name String
+	               ,                                           $ Consumed Connection Path Size
+	               VariantExa2,                                $ Consumed Connection Path
+	               "";                                         $ Help String
+
+ 
+[Assembly]
+
+	VariantExa1 = 
+		,,,,,                                              $ Name, Help String, Reserved, Reserved, Reserved
+		Param735,                                          $ Switch Selector = DLs To Net Cfg (Produced Data)
+		0x00, Assem1,                                      $ Selection Value, Selection Entry
+		0x01, Assem2,                                      $ Selection Value, Selection Entry
+		0x02, Assem3,                                      $ Selection Value, Selection Entry
+		0x03, Assem4,                                      $ Selection Value, Selection Entry
+		0x04, Assem5;                                      $ Selection Value, Selection Entry
+
+	VariantExa2 = 
+		,,,,,                                              $ Name, Help String, Reserved
+		Param733,                                          $ Switch Selector = DLs From Net Cfg (Consumed Data)
+		0x00, Assem41,                                     $ Selection Value, Selection Entry
+		0x01, Assem42,                                     $ Selection Value, Selection Entry
+		0x02, Assem43,                                     $ Selection Value, Selection Entry
+		0x03, Assem44,                                     $ Selection Value, Selection Entry
+		0x04, Assem45;                                     $ Selection Value, Selection Entry
+
+$ -- Produced Data
+
+	Assem1      = "Logic Status & Feedback",                   $ Name
+	              "20 07 24 01 30 04",                         $ Path
+	              4,                                           $ Data Size
+	              0,                                           $ Descriptor
+	              ,,                                           $ Reserved
+	              16, Param10000,                              $ Logic Status
+	              16, Param10001;                              $ Feedback
+
+	Assem2      = "Logic Status & Feedback & 1 Datalink to Net",
+	              "20 07 24 01 30 04",
+	              6,
+	              0x40,
+	              ,,
+	              16, Param10000,                              $ Logic Status
+	              16, Param10001,                              $ Feedback
+	              16, Param165;                                $ Datalink 1 to Net
+
+	Assem3      = "Logic Status & Feedback & 2 Datalinks to Net",
+	              "20 07 24 01 30 04",
+	              8,
+	              0x40,
+	              ,,
+	              16, Param10000,                              $ Logic Status
+	              16, Param10001,                              $ Feedback
+	              16, Param165,                                $ Datalink 1 to Net
+	              16, Param166;                                $ Datalink 2 to Net
+
+	Assem4      = "Logic Status & Feedback & 3 Datalinks to Net",
+	              "20 07 24 01 30 04",
+	              10,
+	              0x40,
+	              ,,
+	              16, Param10000,                              $ Logic Status
+	              16, Param10001,                              $ Feedback
+	              16, Param165,                                $ Datalink 1 to Net
+	              16, Param166,                                $ Datalink 2 to Net
+	              16, Param167;                                $ Datalink 3 to Net
+
+	Assem5      = "Logic Status & Feedback & 4 Datalinks to Net",
+	              "20 07 24 01 30 04",
+	              12,
+	              0x40,
+	              ,,
+	              16, Param10000,                              $ Logic Status
+	              16, Param10001,                              $ Feedback
+	              16, Param165,                                $ Datalink 1 to Net
+	              16, Param166,                                $ Datalink 2 to Net
+	              16, Param167,                                $ Datalink 3 to Net
+	              16, Param168;                                $ Datalink 4 to Net
+
+$ -- Consumed Data
+
+	Assem41     = "Logic Command & Reference",                 $ Name
+	              "20 07 24 02 30 04",                         $ Path
+	              4,                                           $ Data Size
+	              0x40,                                        $ Descriptor
+	              ,,                                           $ Reserved
+	              16, Param10002,                              $ Logic Command
+	              16, Param10003;                              $ Reference
+
+	Assem42     = "Logic Command & Reference & 1 Datalink from Net",
+	              "20 07 24 02 30 04",
+	              6,
+	              0x40,
+	              ,,
+	              16, Param10002,                              $ Logic Command
+	              16, Param10003,                              $ Reference
+	              16, Param161;                                $ Datalink 1 from Net
+
+	Assem43     = "Logic Command & Reference & 2 Datalinks from Net",
+	              "20 07 24 02 30 04",
+	              8,
+	              0x40,
+	              ,,
+	              16, Param10002,                              $ Logic Command
+	              16, Param10003,                              $ Reference
+	              16, Param161,                                $ Datalink 1 from Net
+	              16, Param162;                                $ Datalink 2 from Net
+
+	Assem44     = "Logic Command & Reference & 3 Datalinks from Net",
+	              "20 07 24 02 30 04",
+	              10,
+	              0x40,
+	              ,,
+	              16, Param10002,                              $ Logic Command
+	              16, Param10003,                              $ Reference
+	              16, Param161,                                $ Datalink 1 from Net
+	              16, Param162,                                $ Datalink 2 from Net
+	              16, Param163;                                $ Datalink 3 from Net
+
+	Assem45     = "Logic Command & Reference & 4 Datalinks from Net",
+	              "20 07 24 02 30 04",
+	              12,
+	              0x40,
+	              ,,
+	              16, Param10002,                              $ Logic Command
+	              16, Param10003,                              $ Reference
+	              16, Param161,                                $ Datalink 1 from Net
+	              16, Param162,                                $ Datalink 2 from Net
+	              16, Param163,                                $ Datalink 3 from Net
+	              16, Param164;                                $ Datalink 4 from Net
+
+[ParamClass]
+
+	Revision = 1;
+	MaxInst = 754;
+	Number_Of_Static_Instances = 754;
+	Max_Number_Of_Dynamic_Instances = 0;
+	Descriptor = 11;
+	CfgAssembly = 0;
+
+[Params]
+
+
+ Param1 =
+	0,
+	7,"20 0F 25 01 44 30 01",
+	0x74,199,2,
+	"Output Freq     ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param2 =
+	0,
+	7,"20 0F 25 02 44 30 01",
+	0x74,199,2,
+	"Commanded Freq  ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param3 =
+	0,
+	7,"20 0F 25 03 44 30 01",
+	0x74,199,2,
+	"Output Current  ","A   ",
+	"",
+	0,280,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param4 =
+	0,
+	7,"20 0F 25 04 44 30 01",
+	0x74,199,2,
+	"Output Voltage  ","V   ",
+	"",
+	0,9999,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param5 =
+	0,
+	7,"20 0F 25 05 44 30 01",
+	0x74,199,2,
+	"DC Bus Voltage  ","VDC ",
+	"",
+	0,1200,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param6 =
+	0,
+	7,"20 0F 25 06 44 30 01",
+	0x32,210,2,
+	"Drive Status    ","    ",
+	"",
+	0,15,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param7 =
+	0,
+	7,"20 0F 25 07 44 30 01",
+	0x74,199,2,
+	"Fault 1 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param8 =
+	0,
+	7,"20 0F 25 08 44 30 01",
+	0x74,199,2,
+	"Fault 2 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param9 =
+	0,
+	7,"20 0F 25 09 44 30 01",
+	0x74,199,2,
+	"Fault 3 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param10 =
+	0,
+	7,"20 0F 25 0A 44 30 01",
+	0x74,199,2,
+	"Process Display ","    ",
+	"",
+	0,9999,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param11 =
+	0,
+	7,"20 0F 25 0B 44 30 01",
+	0x74,199,2,
+	"Process Fract   ","    ",
+	"",
+	0,99,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param12 =
+	0,
+	7,"20 0F 25 0C 44 30 01",
+	0x74,199,2,
+	"Control Source  ","    ",
+	"",
+	0,2165,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param13 =
+	0,
+	7,"20 0F 25 0D 44 30 01",
+	0x32,210,2,
+	"Contrl In Status","    ",
+	"",
+	0,15,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param14 =
+	0,
+	7,"20 0F 25 0E 44 30 01",
+	0x32,210,2,
+	"Dig In Status   ","    ",
+	"",
+	0,3,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param15 =
+	0,
+	7,"20 0F 25 0F 44 30 01",
+	0x74,199,2,
+	"Output RPM      ","RPM ",
+	"",
+	0,24000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param16 =
+	0,
+	7,"20 0F 25 10 44 30 01",
+	0x74,199,2,
+	"Output Speed    ","%   ",
+	"",
+	0,1000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param17 =
+	0,
+	7,"20 0F 25 11 44 30 01",
+	0x74,199,2,
+	"Output Power    ","kW  ",
+	"",
+	0,9999,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param18 =
+	0,
+	7,"20 0F 25 12 44 30 01",
+	0x74,199,2,
+	"Power Saved     ","kW  ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param19 =
+	0,
+	7,"20 0F 25 13 44 30 01",
+	0x74,199,2,
+	"Elapsed Run Time","x10h",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param20 =
+	0,
+	7,"20 0F 25 14 44 30 01",
+	0x74,199,2,
+	"Average Power   ","kW  ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param21 =
+	0,
+	7,"20 0F 25 15 44 30 01",
+	0x74,199,2,
+	"Elapsed kWh     ","kWh ",
+	"",
+	0,1000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param22 =
+	0,
+	7,"20 0F 25 16 44 30 01",
+	0x74,199,2,
+	"Elapsed MWh     ","MWh ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param23 =
+	0,
+	7,"20 0F 25 17 44 30 01",
+	0x74,199,2,
+	"Energy Saved    ","kWh ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param24 =
+	0,
+	7,"20 0F 25 18 44 30 01",
+	0x74,199,2,
+	"Accum kWh Sav   ","kWh ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param25 =
+	0,
+	7,"20 0F 25 19 44 30 01",
+	0x74,199,2,
+	"Accum Cost Sav  ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param26 =
+	0,
+	7,"20 0F 25 1A 44 30 01",
+	0x74,199,2,
+	"Accum CO2 Sav   ","kg  ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param27 =
+	0,
+	7,"20 0F 25 1B 44 30 01",
+	0x74,199,2,
+	"Drive Temp      ","C   ",
+	"",
+	0,120,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param28 =
+	0,
+	7,"20 0F 25 1C 44 30 01",
+	0x74,199,2,
+	"Control Temp    ","C   ",
+	"",
+	0,120,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param29 =
+	0,
+	7,"20 0F 25 1D 44 30 01",
+	0x74,199,2,
+	"Control SW Ver  ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,3;
+
+ Param30 =
+	0,
+	7,"20 0F 25 1E 44 30 01",
+	0x22,199,2,
+	"Language        ","    ",
+	"",
+	1,15,1,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param31 =
+	0,
+	7,"20 0F 25 1F 44 30 01",
+	0x64,199,2,
+	"Motor NP Volts  ","V   ",
+	"",
+	20,460,460,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param32 =
+	0,
+	7,"20 0F 25 20 44 30 01",
+	0x64,199,2,
+	"Motor NP Hertz  ","Hz  ",
+	"",
+	15,500,60,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param33 =
+	0,
+	7,"20 0F 25 21 44 30 01",
+	0x64,199,2,
+	"Motor OL Current","A   ",
+	"",
+	0,28,14,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param34 =
+	0,
+	7,"20 0F 25 22 44 30 01",
+	0x64,199,2,
+	"Motor NP FLA    ","A   ",
+	"",
+	1,28,8,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param35 =
+	0,
+	7,"20 0F 25 23 44 30 01",
+	0x64,199,2,
+	"Motor NP Poles  ","    ",
+	"",
+	2,40,4,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param36 =
+	0,
+	7,"20 0F 25 24 44 30 01",
+	0x64,199,2,
+	"Motor NP RPM    ","RPM ",
+	"",
+	0,24000,1750,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param39 =
+	0,
+	7,"20 0F 25 27 44 30 01",
+	0x22,199,2,
+	"Torque Perf Mode","    ",
+	"",
+	0,2,1,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param40 =
+	0,
+	7,"20 0F 25 28 44 30 01",
+	0x22,199,2,
+	"Autotune        ","    ",
+	"",
+	0,2,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param41 =
+	0,
+	7,"20 0F 25 29 44 30 01",
+	0x64,199,2,
+	"Accel Time 1    ","Sec ",
+	"",
+	0,60000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param42 =
+	0,
+	7,"20 0F 25 2A 44 30 01",
+	0x64,199,2,
+	"Decel Time 1    ","Sec ",
+	"",
+	0,60000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param43 =
+	0,
+	7,"20 0F 25 2B 44 30 01",
+	0x64,199,2,
+	"Minimum Freq    ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param44 =
+	0,
+	7,"20 0F 25 2C 44 30 01",
+	0x64,199,2,
+	"Maximum Freq    ","Hz  ",
+	"",
+	0,50000,6000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param45 =
+	0,
+	7,"20 0F 25 2D 44 30 01",
+	0x22,199,2,
+	"Stop Mode       ","    ",
+	"",
+	0,11,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param46 =
+	0,
+	7,"20 0F 25 2E 44 30 01",
+	0x22,199,2,
+	"Start Source 1  ","    ",
+	"",
+	1,4,1,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param47 =
+	0,
+	7,"20 0F 25 2F 44 30 01",
+	0x22,199,2,
+	"Speed Reference1","    ",
+	"",
+	1,11,1,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param48 =
+	0,
+	7,"20 0F 25 30 44 30 01",
+	0x22,199,2,
+	"Start Source 2  ","    ",
+	"",
+	1,4,2,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param49 =
+	0,
+	7,"20 0F 25 31 44 30 01",
+	0x22,199,2,
+	"Speed Reference2","    ",
+	"",
+	1,11,5,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param50 =
+	0,
+	7,"20 0F 25 32 44 30 01",
+	0x22,199,2,
+	"Start Source 3  ","    ",
+	"",
+	1,4,3,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param51 =
+	0,
+	7,"20 0F 25 33 44 30 01",
+	0x22,199,2,
+	"Speed Reference3","    ",
+	"",
+	1,11,3,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param52 =
+	0,
+	7,"20 0F 25 34 44 30 01",
+	0x64,199,2,
+	"Average kWh Cost","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param53 =
+	0,
+	7,"20 0F 25 35 44 30 01",
+	0x22,199,2,
+	"Reset To Defalts","    ",
+	"",
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param62 =
+	0,
+	7,"20 0F 25 3E 44 30 01",
+	0x22,199,2,
+	"DigIn TermBlk 02","    ",
+	"",
+	0,49,48,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param63 =
+	0,
+	7,"20 0F 25 3F 44 30 01",
+	0x22,199,2,
+	"DigIn TermBlk 03","    ",
+	"",
+	0,51,50,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param64 =
+	0,
+	7,"20 0F 25 40 44 30 01",
+	0x22,199,2,
+	"2-Wire Mode     ","    ",
+	"",
+	0,3,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param65 =
+	0,
+	7,"20 0F 25 41 44 30 01",
+	0x22,199,2,
+	"DigIn TermBlk 05","    ",
+	"",
+	0,52,7,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param66 =
+	0,
+	7,"20 0F 25 42 44 30 01",
+	0x22,199,2,
+	"DigIn TermBlk 06","    ",
+	"",
+	0,43,7,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param76 =
+	0,
+	7,"20 0F 25 4C 44 30 01",
+	0x22,199,2,
+	"Relay Out1 Sel  ","    ",
+	"",
+	0,31,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param77 =
+	0,
+	7,"20 0F 25 4D 44 30 01",
+	0x64,199,2,
+	"Relay Out1 Level","    ",
+	"",
+	0,9999,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param78 =
+	0,
+	7,"20 0F 25 4E 44 30 01",
+	0x64,199,2,
+	"RelayOut1 LevelF","    ",
+	"",
+	0,9,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param79 =
+	0,
+	7,"20 0F 25 4F 44 30 01",
+	0x64,199,2,
+	"Relay 1 On Time ","    ",
+	"",
+	0,6000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param80 =
+	0,
+	7,"20 0F 25 50 44 30 01",
+	0x64,199,2,
+	"Relay 1 Off Time","    ",
+	"",
+	0,6000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param86 =
+	0,
+	7,"20 0F 25 56 44 30 01",
+	0x64,199,2,
+	"EM Brk Off Delay","Sec ",
+	"",
+	0,1000,200,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param87 =
+	0,
+	7,"20 0F 25 57 44 30 01",
+	0x64,199,2,
+	"EM Brk On Delay ","Sec ",
+	"",
+	0,1000,200,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param88 =
+	0,
+	7,"20 0F 25 58 44 30 01",
+	0x22,199,2,
+	"Analog Out Sel  ","    ",
+	"",
+	0,23,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param89 =
+	0,
+	7,"20 0F 25 59 44 30 01",
+	0x64,199,2,
+	"Analog Out High ","%   ",
+	"",
+	0,800,100,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param90 =
+	0,
+	7,"20 0F 25 5A 44 30 01",
+	0x64,199,2,
+	"Anlg Out Setpt  ","%   ",
+	"",
+	0,1000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param91 =
+	0,
+	7,"20 0F 25 5B 44 30 01",
+	0x64,199,2,
+	"Anlg In 0-10V Lo","%   ",
+	"",
+	0,2000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param92 =
+	0,
+	7,"20 0F 25 5C 44 30 01",
+	0x64,199,2,
+	"Anlg In 0-10V Hi","%   ",
+	"",
+	0,2000,1000,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param94 =
+	0,
+	7,"20 0F 25 5E 44 30 01",
+	0x22,199,2,
+	"Anlg In V Loss  ","    ",
+	"",
+	0,8,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param95 =
+	0,
+	7,"20 0F 25 5F 44 30 01",
+	0x64,199,2,
+	"Anlg In4-20mA Lo","%   ",
+	"",
+	0,2000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param96 =
+	0,
+	7,"20 0F 25 60 44 30 01",
+	0x64,199,2,
+	"Anlg In4-20mA Hi","%   ",
+	"",
+	0,2000,1000,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param97 =
+	0,
+	7,"20 0F 25 61 44 30 01",
+	0x22,199,2,
+	"Anlg In mA Loss ","    ",
+	"",
+	0,8,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param98 =
+	0,
+	7,"20 0F 25 62 44 30 01",
+	0x64,199,2,
+	"Anlg Loss Delay ","Sec ",
+	"",
+	0,200,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param99 =
+	0,
+	7,"20 0F 25 63 44 30 01",
+	0x64,199,2,
+	"Analog In Filter","    ",
+	"",
+	0,14,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param100 =
+	0,
+	7,"20 0F 25 64 44 30 01",
+	0x22,199,2,
+	"Sleep-Wake Sel  ","    ",
+	"",
+	0,3,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param101 =
+	0,
+	7,"20 0F 25 65 44 30 01",
+	0x64,199,2,
+	"Sleep Level     ","%   ",
+	"",
+	0,1000,100,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param102 =
+	0,
+	7,"20 0F 25 66 44 30 01",
+	0x64,199,2,
+	"Sleep Time      ","Sec ",
+	"",
+	0,6000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param103 =
+	0,
+	7,"20 0F 25 67 44 30 01",
+	0x64,199,2,
+	"Wake Level      ","%   ",
+	"",
+	0,1000,150,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param104 =
+	0,
+	7,"20 0F 25 68 44 30 01",
+	0x64,199,2,
+	"Wake Time       ","Sec ",
+	"",
+	0,6000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param121 =
+	0,
+	7,"20 0F 25 79 44 30 01",
+	0x22,199,2,
+	"Comm Write Mode ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param123 =
+	0,
+	7,"20 0F 25 7B 44 30 01",
+	0x22,199,2,
+	"RS485 Data Rate ","    ",
+	"",
+	0,5,3,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param124 =
+	0,
+	7,"20 0F 25 7C 44 30 01",
+	0x64,199,2,
+	"RS485 Node Addr ","    ",
+	"",
+	1,247,100,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param125 =
+	0,
+	7,"20 0F 25 7D 44 30 01",
+	0x22,199,2,
+	"Comm Loss Action","    ",
+	"",
+	0,3,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param126 =
+	0,
+	7,"20 0F 25 7E 44 30 01",
+	0x64,199,2,
+	"Comm Loss Time  ","Sec ",
+	"",
+	1,600,50,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param127 =
+	0,
+	7,"20 0F 25 7F 44 30 01",
+	0x22,199,2,
+	"RS485 Format    ","    ",
+	"",
+	0,5,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param161 =
+	0,
+	7,"20 0F 25 A1 44 30 01",
+	0x464,199,2,
+	"Opt Data In 1   ","    ",
+	"",
+	0,800,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param162 =
+	0,
+	7,"20 0F 25 A2 44 30 01",
+	0x464,199,2,
+	"Opt Data In 2   ","    ",
+	"",
+	0,800,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param163 =
+	0,
+	7,"20 0F 25 A3 44 30 01",
+	0x464,199,2,
+	"Opt Data In 3   ","    ",
+	"",
+	0,800,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param164 =
+	0,
+	7,"20 0F 25 A4 44 30 01",
+	0x464,199,2,
+	"Opt Data In 4   ","    ",
+	"",
+	0,800,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param165 =
+	0,
+	7,"20 0F 25 A5 44 30 01",
+	0x464,199,2,
+	"Opt Data Out 1  ","    ",
+	"",
+	0,800,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param166 =
+	0,
+	7,"20 0F 25 A6 44 30 01",
+	0x464,199,2,
+	"Opt Data Out 2  ","    ",
+	"",
+	0,800,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param167 =
+	0,
+	7,"20 0F 25 A7 44 30 01",
+	0x464,199,2,
+	"Opt Data Out 3  ","    ",
+	"",
+	0,800,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param168 =
+	0,
+	7,"20 0F 25 A8 44 30 01",
+	0x464,199,2,
+	"Opt Data Out 4  ","    ",
+	"",
+	0,800,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param169 =
+	0,
+	7,"20 0F 25 A9 44 30 01",
+	0x22,199,2,
+	"MultiDrv Sel    ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param171 =
+	0,
+	7,"20 0F 25 AB 44 30 01",
+	0x64,199,2,
+	"Drv 1 Addr      ","    ",
+	"",
+	1,247,2,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param172 =
+	0,
+	7,"20 0F 25 AC 44 30 01",
+	0x64,199,2,
+	"Drv 2 Addr      ","    ",
+	"",
+	1,247,3,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param173 =
+	0,
+	7,"20 0F 25 AD 44 30 01",
+	0x64,199,2,
+	"Drv 3 Addr      ","    ",
+	"",
+	1,247,4,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param174 =
+	0,
+	7,"20 0F 25 AE 44 30 01",
+	0x64,199,2,
+	"Drv 4 Addr      ","    ",
+	"",
+	1,247,5,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param175 =
+	0,
+	7,"20 0F 25 AF 44 30 01",
+	0x22,199,2,
+	"DSI I/O Cfg     ","    ",
+	"",
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param360 =
+	0,
+	7,"20 0F 25 68 45 30 01",
+	0x74,199,2,
+	"Analog In 0-10V ","%   ",
+	"",
+	0,1000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param361 =
+	0,
+	7,"20 0F 25 69 45 30 01",
+	0x74,199,2,
+	"Analog In 4-20mA","%   ",
+	"",
+	0,1000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param362 =
+	0,
+	7,"20 0F 25 6A 45 30 01",
+	0x74,199,2,
+	"Elapsed Time-hr ","hr  ",
+	"",
+	0,32767,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param363 =
+	0,
+	7,"20 0F 25 6B 45 30 01",
+	0x74,199,2,
+	"Elapsed Time-min","min ",
+	"",
+	0,600,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param364 =
+	0,
+	7,"20 0F 25 6C 45 30 01",
+	0x74,199,2,
+	"Counter Status  ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param365 =
+	0,
+	7,"20 0F 25 6D 45 30 01",
+	0x74,199,2,
+	"Timer Status    ","Sec ",
+	"",
+	0,9999,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param366 =
+	0,
+	7,"20 0F 25 6E 45 30 01",
+	0x74,199,2,
+	"Timer StatusF   ","    ",
+	"",
+	0,9,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param367 =
+	0,
+	7,"20 0F 25 6F 45 30 01",
+	0x74,199,2,
+	"Drive Type      ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param368 =
+	0,
+	7,"20 0F 25 70 45 30 01",
+	0x30,210,2,
+	"Testpoint Data  ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param369 =
+	0,
+	7,"20 0F 25 71 45 30 01",
+	0x74,199,2,
+	"Motor OL Level  ","%   ",
+	"",
+	0,1500,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param375 =
+	0,
+	7,"20 0F 25 77 45 30 01",
+	0x74,199,2,
+	"Slip Hz Meter   ","Hz  ",
+	"",
+	0,250,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param376 =
+	0,
+	7,"20 0F 25 78 45 30 01",
+	0x74,199,2,
+	"Speed Feedback  ","RPM ",
+	"",
+	0,64000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param377 =
+	0,
+	7,"20 0F 25 79 45 30 01",
+	0x74,199,2,
+	"Speed Feedback F","RPM ",
+	"",
+	0,9,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param378 =
+	0,
+	7,"20 0F 25 7A 45 30 01",
+	0x74,199,2,
+	"Encoder Speed   ","RPM ",
+	"",
+	0,64000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param379 =
+	0,
+	7,"20 0F 25 7B 45 30 01",
+	0x74,199,2,
+	"Encoder Speed F ","RPM ",
+	"",
+	0,9,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param380 =
+	0,
+	7,"20 0F 25 7C 45 30 01",
+	0x74,199,2,
+	"DC Bus Ripple   ","VDC ",
+	"",
+	0,820,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param381 =
+	0,
+	7,"20 0F 25 7D 45 30 01",
+	0x74,199,2,
+	"Output Powr Fctr","deg ",
+	"",
+	0,1800,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param382 =
+	0,
+	7,"20 0F 25 7E 45 30 01",
+	0x74,199,2,
+	"Torque Current  ","A   ",
+	"",
+	0,280,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param383 =
+	0,
+	7,"20 0F 25 7F 45 30 01",
+	0x74,199,2,
+	"PID1 Fdbk Displ ","%   ",
+	"",
+	0,1000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param384 =
+	0,
+	7,"20 0F 25 80 45 30 01",
+	0x74,199,2,
+	"PID1 Setpnt Disp","%   ",
+	"",
+	0,1000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param390 =
+	0,
+	7,"20 0F 25 86 45 30 01",
+	0x32,210,2,
+	"Fiber Status    ","    ",
+	"",
+	0,15,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param392 =
+	0,
+	7,"20 0F 25 88 45 30 01",
+	0x32,199,2,
+	"RdyBit Mode Act ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param393 =
+	0,
+	7,"20 0F 25 89 45 30 01",
+	0x32,210,2,
+	"Drive Status 2  ","    ",
+	"",
+	0,511,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param394 =
+	0,
+	7,"20 0F 25 8A 45 30 01",
+	0x32,210,2,
+	"Dig Out Status  ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param410 =
+	0,
+	7,"20 0F 25 9A 45 30 01",
+	0x64,199,2,
+	"Preset Freq 0   ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param411 =
+	0,
+	7,"20 0F 25 9B 45 30 01",
+	0x64,199,2,
+	"Preset Freq 1   ","Hz  ",
+	"",
+	0,50000,500,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param412 =
+	0,
+	7,"20 0F 25 9C 45 30 01",
+	0x64,199,2,
+	"Preset Freq 2   ","Hz  ",
+	"",
+	0,50000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param413 =
+	0,
+	7,"20 0F 25 9D 45 30 01",
+	0x64,199,2,
+	"Preset Freq 3   ","Hz  ",
+	"",
+	0,50000,2000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param414 =
+	0,
+	7,"20 0F 25 9E 45 30 01",
+	0x64,199,2,
+	"Preset Freq 4   ","Hz  ",
+	"",
+	0,50000,3000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param415 =
+	0,
+	7,"20 0F 25 9F 45 30 01",
+	0x64,199,2,
+	"Preset Freq 5   ","Hz  ",
+	"",
+	0,50000,4000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param416 =
+	0,
+	7,"20 0F 25 A0 45 30 01",
+	0x64,199,2,
+	"Preset Freq 6   ","Hz  ",
+	"",
+	0,50000,5000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param417 =
+	0,
+	7,"20 0F 25 A1 45 30 01",
+	0x64,199,2,
+	"Preset Freq 7   ","Hz  ",
+	"",
+	0,50000,6000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param426 =
+	0,
+	7,"20 0F 25 AA 45 30 01",
+	0x64,199,2,
+	"Keypad Freq     ","Hz  ",
+	"",
+	0,50000,6000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param427 =
+	0,
+	7,"20 0F 25 AB 45 30 01",
+	0x64,199,2,
+	"MOP Freq        ","Hz  ",
+	"",
+	0,50000,6000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param428 =
+	0,
+	7,"20 0F 25 AC 45 30 01",
+	0x22,199,2,
+	"MOP Reset Sel   ","    ",
+	"",
+	0,1,1,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param429 =
+	0,
+	7,"20 0F 25 AD 45 30 01",
+	0x22,199,2,
+	"MOP Preload     ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param430 =
+	0,
+	7,"20 0F 25 AE 45 30 01",
+	0x64,199,2,
+	"MOP Time        ","Sec ",
+	"",
+	1,6000,100,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param431 =
+	0,
+	7,"20 0F 25 AF 45 30 01",
+	0x64,199,2,
+	"Jog Frequency   ","Hz  ",
+	"",
+	0,50000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param432 =
+	0,
+	7,"20 0F 25 B0 45 30 01",
+	0x64,199,2,
+	"Jog Accel/Decel ","Sec ",
+	"",
+	1,60000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param433 =
+	0,
+	7,"20 0F 25 B1 45 30 01",
+	0x64,199,2,
+	"Purge Frequency ","Hz  ",
+	"",
+	0,50000,500,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param434 =
+	0,
+	7,"20 0F 25 B2 45 30 01",
+	0x64,199,2,
+	"DC Brake Time   ","Sec ",
+	"",
+	0,999,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param435 =
+	0,
+	7,"20 0F 25 B3 45 30 01",
+	0x64,199,2,
+	"DC Brake Level  ","A   ",
+	"",
+	0,25,1,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param436 =
+	0,
+	7,"20 0F 25 B4 45 30 01",
+	0x64,199,2,
+	"DC Brk Time@Strt","Sec ",
+	"",
+	0,999,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param437 =
+	0,
+	7,"20 0F 25 B5 45 30 01",
+	0x22,199,2,
+	"DB Resistor Sel ","%   ",
+	"",
+	0,99,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param438 =
+	0,
+	7,"20 0F 25 B6 45 30 01",
+	0x64,199,2,
+	"DB Threshold    ","%   ",
+	"",
+	100,1100,1000,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param439 =
+	0,
+	7,"20 0F 25 B7 45 30 01",
+	0x64,199,2,
+	"S Curve %       ","%   ",
+	"",
+	0,100,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param440 =
+	0,
+	7,"20 0F 25 B8 45 30 01",
+	0x64,199,2,
+	"PWM Frequency   ","kHz ",
+	"",
+	20,160,40,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param442 =
+	0,
+	7,"20 0F 25 BA 45 30 01",
+	0x64,199,2,
+	"Accel Time 2    ","Sec ",
+	"",
+	0,60000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param443 =
+	0,
+	7,"20 0F 25 BB 45 30 01",
+	0x64,199,2,
+	"Decel Time 2    ","Sec ",
+	"",
+	0,60000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param444 =
+	0,
+	7,"20 0F 25 BC 45 30 01",
+	0x64,199,2,
+	"Accel Time 3    ","Sec ",
+	"",
+	0,60000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param445 =
+	0,
+	7,"20 0F 25 BD 45 30 01",
+	0x64,199,2,
+	"Decel Time 3    ","Sec ",
+	"",
+	0,60000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param446 =
+	0,
+	7,"20 0F 25 BE 45 30 01",
+	0x64,199,2,
+	"Accel Time 4    ","Sec ",
+	"",
+	0,60000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param447 =
+	0,
+	7,"20 0F 25 BF 45 30 01",
+	0x64,199,2,
+	"Decel Time 4    ","Sec ",
+	"",
+	0,60000,1000,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param448 =
+	0,
+	7,"20 0F 25 C0 45 30 01",
+	0x64,199,2,
+	"Skip Frequency 1","Hz  ",
+	"",
+	0,5000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param449 =
+	0,
+	7,"20 0F 25 C1 45 30 01",
+	0x64,199,2,
+	"Skip Freq Band 1","Hz  ",
+	"",
+	0,300,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param450 =
+	0,
+	7,"20 0F 25 C2 45 30 01",
+	0x64,199,2,
+	"Skip Frequency 2","Hz  ",
+	"",
+	0,5000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param451 =
+	0,
+	7,"20 0F 25 C3 45 30 01",
+	0x64,199,2,
+	"Skip Freq Band 2","Hz  ",
+	"",
+	0,300,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param456 =
+	0,
+	7,"20 0F 25 C8 45 30 01",
+	0x64,199,2,
+	"PID 1 Trim Hi   ","Hz  ",
+	"",
+	0,5000,600,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param457 =
+	0,
+	7,"20 0F 25 C9 45 30 01",
+	0x64,199,2,
+	"PID 1 Trim Lo   ","Hz  ",
+	"",
+	0,5000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param458 =
+	0,
+	7,"20 0F 25 CA 45 30 01",
+	0x22,199,2,
+	"PID 1 Trim Sel  ","    ",
+	"",
+	0,10,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param459 =
+	0,
+	7,"20 0F 25 CB 45 30 01",
+	0x22,199,2,
+	"PID 1 Ref Sel   ","    ",
+	"",
+	0,10,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param460 =
+	0,
+	7,"20 0F 25 CC 45 30 01",
+	0x22,199,2,
+	"PID 1 Fdback Sel","    ",
+	"",
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param461 =
+	0,
+	7,"20 0F 25 CD 45 30 01",
+	0x64,199,2,
+	"PID 1 Prop Gain ","    ",
+	"",
+	0,9999,1,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param462 =
+	0,
+	7,"20 0F 25 CE 45 30 01",
+	0x64,199,2,
+	"PID 1 Integ Time","Sec ",
+	"",
+	0,9999,20,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param463 =
+	0,
+	7,"20 0F 25 CF 45 30 01",
+	0x64,199,2,
+	"PID 1 Diff Rate ","1/s ",
+	"",
+	0,9999,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param464 =
+	0,
+	7,"20 0F 25 D0 45 30 01",
+	0x64,199,2,
+	"PID 1 Setpoint  ","%   ",
+	"",
+	0,1000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param465 =
+	0,
+	7,"20 0F 25 D1 45 30 01",
+	0x64,199,2,
+	"PID 1 Deadband  ","%   ",
+	"",
+	0,100,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param466 =
+	0,
+	7,"20 0F 25 D2 45 30 01",
+	0x64,199,2,
+	"PID 1 Preload   ","Hz  ",
+	"",
+	0,5000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param467 =
+	0,
+	7,"20 0F 25 D3 45 30 01",
+	0x22,199,2,
+	"PID 1 Invert Err","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param481 =
+	0,
+	7,"20 0F 25 E1 45 30 01",
+	0x64,199,2,
+	"Process Disp Lo ","    ",
+	"",
+	0,9999,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param482 =
+	0,
+	7,"20 0F 25 E2 45 30 01",
+	0x64,199,2,
+	"Process Disp Hi ","    ",
+	"",
+	0,9999,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param483 =
+	0,
+	7,"20 0F 25 E3 45 30 01",
+	0x20,210,2,
+	"Testpoint Sel   ","    ",
+	"",
+	0,65535,1024,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param484 =
+	0,
+	7,"20 0F 25 E4 45 30 01",
+	0x64,199,2,
+	"Current Limit 1 ","A   ",
+	"",
+	0,25,21,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param486 =
+	0,
+	7,"20 0F 25 E6 45 30 01",
+	0x64,199,2,
+	"Shear Pin1 Level","A   ",
+	"",
+	0,28,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param487 =
+	0,
+	7,"20 0F 25 E7 45 30 01",
+	0x64,199,2,
+	"Shear Pin 1 Time","Sec ",
+	"",
+	0,3000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param492 =
+	0,
+	7,"20 0F 25 EC 45 30 01",
+	0x22,199,2,
+	"Stall Fault Time","    ",
+	"",
+	0,5,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param493 =
+	0,
+	7,"20 0F 25 ED 45 30 01",
+	0x22,199,2,
+	"Motor OL Select ","    ",
+	"",
+	0,2,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param494 =
+	0,
+	7,"20 0F 25 EE 45 30 01",
+	0x22,199,2,
+	"Motor OL Ret    ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param495 =
+	0,
+	7,"20 0F 25 EF 45 30 01",
+	0x22,199,2,
+	"Drive OL Mode   ","    ",
+	"",
+	0,3,3,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param496 =
+	0,
+	7,"20 0F 25 F0 45 30 01",
+	0x64,199,2,
+	"IR Voltage Drop ","Vac ",
+	"",
+	0,1150,175,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param497 =
+	0,
+	7,"20 0F 25 F1 45 30 01",
+	0x64,199,2,
+	"Flux Current Ref","A   ",
+	"",
+	0,196,40,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param530 =
+	0,
+	7,"20 0F 25 12 46 30 01",
+	0x22,199,2,
+	"Boost Select    ","    ",
+	"",
+	0,14,8,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param531 =
+	0,
+	7,"20 0F 25 13 46 30 01",
+	0x64,199,2,
+	"Start Boost     ","%   ",
+	"",
+	0,250,25,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param532 =
+	0,
+	7,"20 0F 25 14 46 30 01",
+	0x64,199,2,
+	"Break Voltage   ","%   ",
+	"",
+	0,1000,250,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param533 =
+	0,
+	7,"20 0F 25 15 46 30 01",
+	0x64,199,2,
+	"Break Frequency ","Hz  ",
+	"",
+	0,5000,150,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param534 =
+	0,
+	7,"20 0F 25 16 46 30 01",
+	0x64,199,2,
+	"Maximum Voltage ","V   ",
+	"",
+	20,510,460,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param535 =
+	0,
+	7,"20 0F 25 17 46 30 01",
+	0x22,199,2,
+	"Motor Fdbk Type ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param537 =
+	0,
+	7,"20 0F 25 19 46 30 01",
+	0x64,199,2,
+	"Pulse In Scale  ","    ",
+	"",
+	0,20000,64,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param538 =
+	0,
+	7,"20 0F 25 1A 46 30 01",
+	0x64,199,2,
+	"Ki Speed Loop   ","    ",
+	"",
+	0,4000,20,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param539 =
+	0,
+	7,"20 0F 25 1B 46 30 01",
+	0x64,199,2,
+	"Kp Speed Loop   ","    ",
+	"",
+	0,2000,5,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param540 =
+	0,
+	7,"20 0F 25 1C 46 30 01",
+	0x22,199,2,
+	"Var PWM Disable ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param541 =
+	0,
+	7,"20 0F 25 1D 46 30 01",
+	0x64,199,2,
+	"Auto Rstrt Tries","    ",
+	"",
+	0,9,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param542 =
+	0,
+	7,"20 0F 25 1E 46 30 01",
+	0x64,199,2,
+	"Auto Rstrt Delay","Sec ",
+	"",
+	0,1200,10,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param543 =
+	0,
+	7,"20 0F 25 1F 46 30 01",
+	0x22,199,2,
+	"Start At PowerUp","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param544 =
+	0,
+	7,"20 0F 25 20 46 30 01",
+	0x22,199,2,
+	"Reverse Disable ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param545 =
+	0,
+	7,"20 0F 25 21 46 30 01",
+	0x22,199,2,
+	"Flying Start En ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param546 =
+	0,
+	7,"20 0F 25 22 46 30 01",
+	0x64,199,2,
+	"FlyStrt CurLimit","%   ",
+	"",
+	30,200,65,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param547 =
+	0,
+	7,"20 0F 25 23 46 30 01",
+	0x22,199,2,
+	"Compensation    ","    ",
+	"",
+	0,3,1,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param548 =
+	0,
+	7,"20 0F 25 24 46 30 01",
+	0x22,199,2,
+	"Power Loss Mode ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param549 =
+	0,
+	7,"20 0F 25 25 46 30 01",
+	0x22,199,2,
+	"Half Bus Enable ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param550 =
+	0,
+	7,"20 0F 25 26 46 30 01",
+	0x22,199,2,
+	"Bus Reg Enable  ","    ",
+	"",
+	0,1,1,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param551 =
+	0,
+	7,"20 0F 25 27 46 30 01",
+	0x22,199,2,
+	"Fault Clear     ","    ",
+	"",
+	0,2,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param552 =
+	0,
+	7,"20 0F 25 28 46 30 01",
+	0x64,199,2,
+	"Program Lock    ","    ",
+	"",
+	0,9999,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param553 =
+	0,
+	7,"20 0F 25 29 46 30 01",
+	0x22,199,2,
+	"Program Lock Mod","    ",
+	"",
+	0,3,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param554 =
+	0,
+	7,"20 0F 25 2A 46 30 01",
+	0x22,199,2,
+	"Drv Ambient Sel ","    ",
+	"",
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param555 =
+	0,
+	7,"20 0F 25 2B 46 30 01",
+	0x22,199,2,
+	"Reset Meters    ","    ",
+	"",
+	0,2,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param556 =
+	0,
+	7,"20 0F 25 2C 46 30 01",
+	0x22,199,2,
+	"Text Scroll     ","    ",
+	"",
+	0,3,2,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param557 =
+	0,
+	7,"20 0F 25 2D 46 30 01",
+	0x22,199,2,
+	"Out Phas Loss En","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param567 =
+	0,
+	7,"20 0F 25 37 46 30 01",
+	0x64,199,2,
+	"Max Traverse    ","Hz  ",
+	"",
+	0,30000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param568 =
+	0,
+	7,"20 0F 25 38 46 30 01",
+	0x64,199,2,
+	"Traverse Inc    ","Sec ",
+	"",
+	0,30000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param569 =
+	0,
+	7,"20 0F 25 39 46 30 01",
+	0x64,199,2,
+	"Traverse Dec    ","Sec ",
+	"",
+	0,30000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param570 =
+	0,
+	7,"20 0F 25 3A 46 30 01",
+	0x64,199,2,
+	"P Jump          ","Hz  ",
+	"",
+	0,30000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param571 =
+	0,
+	7,"20 0F 25 3B 46 30 01",
+	0x64,199,2,
+	"Sync Time       ","Sec ",
+	"",
+	0,32000,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param572 =
+	0,
+	7,"20 0F 25 3C 46 30 01",
+	0x64,199,2,
+	"Speed Ratio     ","    ",
+	"",
+	1,9999,100,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param573 =
+	0,
+	7,"20 0F 25 3D 46 30 01",
+	0x22,210,2,
+	"Mtr Options Cfg ","    ",
+	"",
+	0,3,3,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param574 =
+	0,
+	7,"20 0F 25 3E 46 30 01",
+	0x22,199,2,
+	"RdyBit Mode Cfg ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param575 =
+	0,
+	7,"20 0F 25 3F 46 30 01",
+	0x22,199,2,
+	"Flux Braking En ","    ",
+	"",
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param576 =
+	0,
+	7,"20 0F 25 40 46 30 01",
+	0x64,199,2,
+	"Phase Loss Level","%   ",
+	"",
+	0,1000,250,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param604 =
+	0,
+	7,"20 0F 25 5C 46 30 01",
+	0x74,199,2,
+	"Fault 4 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param605 =
+	0,
+	7,"20 0F 25 5D 46 30 01",
+	0x74,199,2,
+	"Fault 5 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param606 =
+	0,
+	7,"20 0F 25 5E 46 30 01",
+	0x74,199,2,
+	"Fault 6 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param607 =
+	0,
+	7,"20 0F 25 5F 46 30 01",
+	0x74,199,2,
+	"Fault 7 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param608 =
+	0,
+	7,"20 0F 25 60 46 30 01",
+	0x74,199,2,
+	"Fault 8 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param609 =
+	0,
+	7,"20 0F 25 61 46 30 01",
+	0x74,199,2,
+	"Fault 9 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param610 =
+	0,
+	7,"20 0F 25 62 46 30 01",
+	0x74,199,2,
+	"Fault10 Code    ","    ",
+	"",
+	0,127,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param611 =
+	0,
+	7,"20 0F 25 63 46 30 01",
+	0x74,199,2,
+	"Fault 1 Time-hr ","hr  ",
+	"",
+	0,32767,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param612 =
+	0,
+	7,"20 0F 25 64 46 30 01",
+	0x74,199,2,
+	"Fault 2 Time-hr ","hr  ",
+	"",
+	0,32767,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param613 =
+	0,
+	7,"20 0F 25 65 46 30 01",
+	0x74,199,2,
+	"Fault 3 Time-hr ","hr  ",
+	"",
+	0,32767,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param614 =
+	0,
+	7,"20 0F 25 66 46 30 01",
+	0x74,199,2,
+	"Fault 4 Time-hr ","hr  ",
+	"",
+	0,32767,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param615 =
+	0,
+	7,"20 0F 25 67 46 30 01",
+	0x74,199,2,
+	"Fault 5 Time-hr ","hr  ",
+	"",
+	0,32767,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param621 =
+	0,
+	7,"20 0F 25 6D 46 30 01",
+	0x74,199,2,
+	"Fault 1 Time-min","min ",
+	"",
+	0,3200,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param622 =
+	0,
+	7,"20 0F 25 6E 46 30 01",
+	0x74,199,2,
+	"Fault 2 Time-min","min ",
+	"",
+	0,3200,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param623 =
+	0,
+	7,"20 0F 25 6F 46 30 01",
+	0x74,199,2,
+	"Fault 3 Time-min","min ",
+	"",
+	0,3200,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param624 =
+	0,
+	7,"20 0F 25 70 46 30 01",
+	0x74,199,2,
+	"Fault 4 Time-min","min ",
+	"",
+	0,3200,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param625 =
+	0,
+	7,"20 0F 25 71 46 30 01",
+	0x74,199,2,
+	"Fault 5 Time-min","min ",
+	"",
+	0,3200,0,
+	1,1,1,0,
+	0,0,0,0,1;
+
+ Param631 =
+	0,
+	7,"20 0F 25 77 46 30 01",
+	0x74,199,2,
+	"Fault 1 Freq    ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param632 =
+	0,
+	7,"20 0F 25 78 46 30 01",
+	0x74,199,2,
+	"Fault 2 Freq    ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param633 =
+	0,
+	7,"20 0F 25 79 46 30 01",
+	0x74,199,2,
+	"Fault 3 Freq    ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param634 =
+	0,
+	7,"20 0F 25 7A 46 30 01",
+	0x74,199,2,
+	"Fault 4 Freq    ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param635 =
+	0,
+	7,"20 0F 25 7B 46 30 01",
+	0x74,199,2,
+	"Fault 5 Freq    ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param641 =
+	0,
+	7,"20 0F 25 81 46 30 01",
+	0x74,199,2,
+	"Fault 1 Current ","A   ",
+	"",
+	0,917,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param642 =
+	0,
+	7,"20 0F 25 82 46 30 01",
+	0x74,199,2,
+	"Fault 2 Current ","A   ",
+	"",
+	0,917,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param643 =
+	0,
+	7,"20 0F 25 83 46 30 01",
+	0x74,199,2,
+	"Fault 3 Current ","A   ",
+	"",
+	0,917,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param644 =
+	0,
+	7,"20 0F 25 84 46 30 01",
+	0x74,199,2,
+	"Fault 4 Current ","A   ",
+	"",
+	0,917,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param645 =
+	0,
+	7,"20 0F 25 85 46 30 01",
+	0x74,199,2,
+	"Fault 5 Current ","A   ",
+	"",
+	0,917,0,
+	1,1,1,0,
+	0,0,0,0,2;
+
+ Param651 =
+	0,
+	7,"20 0F 25 8B 46 30 01",
+	0x74,199,2,
+	"Fault 1 BusVolts","VDC ",
+	"",
+	0,13107,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param652 =
+	0,
+	7,"20 0F 25 8C 46 30 01",
+	0x74,199,2,
+	"Fault 2 BusVolts","VDC ",
+	"",
+	0,13107,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param653 =
+	0,
+	7,"20 0F 25 8D 46 30 01",
+	0x74,199,2,
+	"Fault 3 BusVolts","VDC ",
+	"",
+	0,13107,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param654 =
+	0,
+	7,"20 0F 25 8E 46 30 01",
+	0x74,199,2,
+	"Fault 4 BusVolts","VDC ",
+	"",
+	0,13107,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param655 =
+	0,
+	7,"20 0F 25 8F 46 30 01",
+	0x74,199,2,
+	"Fault 5 BusVolts","VDC ",
+	"",
+	0,13107,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param661 =
+	0,
+	7,"20 0F 25 95 46 30 01",
+	0x32,210,2,
+	"Status @ Fault 1","    ",
+	"",
+	0,15,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param662 =
+	0,
+	7,"20 0F 25 96 46 30 01",
+	0x32,210,2,
+	"Status @ Fault 2","    ",
+	"",
+	0,15,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param663 =
+	0,
+	7,"20 0F 25 97 46 30 01",
+	0x32,210,2,
+	"Status @ Fault 3","    ",
+	"",
+	0,15,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param664 =
+	0,
+	7,"20 0F 25 98 46 30 01",
+	0x32,210,2,
+	"Status @ Fault 4","    ",
+	"",
+	0,15,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param665 =
+	0,
+	7,"20 0F 25 99 46 30 01",
+	0x32,210,2,
+	"Status @ Fault 5","    ",
+	"",
+	0,15,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param681 =
+	0,
+	7,"20 0F 25 A9 46 30 01",
+	0x74,199,2,
+	"Comm Sts - DSI  ","    ",
+	"",
+	0,1911,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param682 =
+	0,
+	7,"20 0F 25 AA 46 30 01",
+	0x74,199,2,
+	"Comm Sts - Opt  ","    ",
+	"",
+	0,1911,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param686 =
+	0,
+	7,"20 0F 25 AE 46 30 01",
+	0x32,210,2,
+	"DSI I/O Act     ","    ",
+	"",
+	0,31,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param705 =
+	0,
+	7,"20 0F 25 C1 46 30 01",
+	0x30,210,2,
+	"Drv 0 Logic Cmd ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param706 =
+	0,
+	7,"20 0F 25 C2 46 30 01",
+	0x74,199,2,
+	"Drv 0 Reference ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param707 =
+	0,
+	7,"20 0F 25 C3 46 30 01",
+	0x30,210,2,
+	"Drv 0 Logic Sts ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param708 =
+	0,
+	7,"20 0F 25 C4 46 30 01",
+	0x74,199,2,
+	"Drv 0 Feedback  ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param709 =
+	0,
+	7,"20 0F 25 C5 46 30 01",
+	0x30,210,2,
+	"Drv 1 Logic Cmd ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param710 =
+	0,
+	7,"20 0F 25 C6 46 30 01",
+	0x74,199,2,
+	"Drv 1 Reference ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param711 =
+	0,
+	7,"20 0F 25 C7 46 30 01",
+	0x30,210,2,
+	"Drv 1 Logic Sts ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param712 =
+	0,
+	7,"20 0F 25 C8 46 30 01",
+	0x74,199,2,
+	"Drv 1 Feedback  ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param713 =
+	0,
+	7,"20 0F 25 C9 46 30 01",
+	0x30,210,2,
+	"Drv 2 Logic Cmd ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param714 =
+	0,
+	7,"20 0F 25 CA 46 30 01",
+	0x74,199,2,
+	"Drv 2 Reference ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param715 =
+	0,
+	7,"20 0F 25 CB 46 30 01",
+	0x30,210,2,
+	"Drv 2 Logic Sts ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param716 =
+	0,
+	7,"20 0F 25 CC 46 30 01",
+	0x74,199,2,
+	"Drv 2 Feedback  ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param717 =
+	0,
+	7,"20 0F 25 CD 46 30 01",
+	0x30,210,2,
+	"Drv 3 Logic Cmd ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param718 =
+	0,
+	7,"20 0F 25 CE 46 30 01",
+	0x74,199,2,
+	"Drv 3 Reference ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param719 =
+	0,
+	7,"20 0F 25 CF 46 30 01",
+	0x30,210,2,
+	"Drv 3 Logic Sts ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param720 =
+	0,
+	7,"20 0F 25 D0 46 30 01",
+	0x74,199,2,
+	"Drv 3 Feedback  ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param721 =
+	0,
+	7,"20 0F 25 D1 46 30 01",
+	0x30,210,2,
+	"Drv 4 Logic Cmd ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param722 =
+	0,
+	7,"20 0F 25 D2 46 30 01",
+	0x74,199,2,
+	"Drv 4 Reference ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param723 =
+	0,
+	7,"20 0F 25 D3 46 30 01",
+	0x30,210,2,
+	"Drv 4 Logic Sts ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param724 =
+	0,
+	7,"20 0F 25 D4 46 30 01",
+	0x74,199,2,
+	"Drv 4 Feedback  ","Hz  ",
+	"",
+	0,50000,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param731 =
+	0,
+	7,"20 0F 25 DB 46 30 01",
+	0x74,199,2,
+	"DSI Errors      ","    ",
+	"",
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param732 =
+	0,
+	7,"20 93 25 01 40 30 09",
+	0x32,199,2,
+	"MultiDrv Select ","    ",
+	"", 
+	0,2,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param733 =
+	0,
+	7,"20 93 25 02 40 30 09",
+	0x64,199,2,
+	"DLs From Net Cfg","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param734 =
+	0,
+	7,"20 93 25 03 40 30 09",
+	0x74,199,2,
+	"DLs From Net Act","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param735 =
+	0,
+	7,"20 93 25 04 40 30 09",
+	0x64,199,2,
+	"DLs To Net Cfg  ","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param736 =
+	0,
+	7,"20 93 25 05 40 30 09",
+	0x74,199,2,
+	"DLs To Net Act  ","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param737 =
+	0,
+	7,"20 93 25 06 40 30 09",
+	0x32,199,2,
+	"Net Addr Src    ","    ",
+	"", 
+	0,1,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param738 =
+	0,
+	7,"20 93 25 07 40 30 09",
+	0x64,199,2,
+	"Net Addr Cfg    ","    ",
+	"", 
+	0,63,63,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param739 =
+	0,
+	7,"20 93 25 08 40 30 09",
+	0x74,199,2,
+	"Net Addr Act    ","    ",
+	"", 
+	0,63,63,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param740 =
+	0,
+	7,"20 93 25 09 40 30 09",
+	0x22,199,2,
+	"Net Rate Cfg    ","    ",
+	"", 
+	0,3,3,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param741 =
+	0,
+	7,"20 93 25 0A 40 30 09",
+	0x32,199,2,
+	"Net Rate Act    ","    ",
+	"", 
+	0,3,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param742 =
+	0,
+	7,"20 93 25 0B 40 30 09",
+	0x20,210,2,
+	"COS Status Mask ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param743 =
+	0,
+	7,"20 93 25 0C 40 30 09",
+	0x64,199,2,
+	"COS Fdbk Change ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param744 =
+	0,
+	7,"20 93 25 0D 40 30 09",
+	0x74,199,2,
+	"COS/Cyc Interval","s   ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,3;
+
+ Param745 =
+	0,
+	7,"20 93 25 0E 40 30 09",
+	0x22,199,2,
+	"Reset Module    ","    ",
+	"", 
+	0,2,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param746 =
+	0,
+	7,"20 93 25 0F 40 30 09",
+	0x22,199,2,
+	"Comm Flt Action ","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param747 =
+	0,
+	7,"20 93 25 10 40 30 09",
+	0x22,199,2,
+	"Idle Flt Action ","    ",
+	"", 
+	0,4,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param748 =
+	0,
+	7,"20 93 25 11 40 30 09",
+	0x20,210,2,
+	"Flt Cfg Logic   ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param749 =
+	0,
+	7,"20 93 25 12 40 30 09",
+	0x64,199,2,
+	"Flt Cfg Ref     ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param750 =
+	0,
+	7,"20 93 25 13 40 30 09",
+	0x64,199,2,
+	"Flt Cfg DL 1    ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param751 =
+	0,
+	7,"20 93 25 14 40 30 09",
+	0x64,199,2,
+	"Flt Cfg DL 2    ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param752 =
+	0,
+	7,"20 93 25 15 40 30 09",
+	0x64,199,2,
+	"Flt Cfg DL 3    ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param753 =
+	0,
+	7,"20 93 25 16 40 30 09",
+	0x64,199,2,
+	"Flt Cfg DL 4    ","    ",
+	"", 
+	0,65535,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param754 =
+	0,
+	7,"20 93 25 17 40 30 09",
+	0x32,210,2,
+	"DSI I/O Active  ","    ",
+	"", 
+	0,31,0,
+	1,1,1,0,
+	0,0,0,0,0;
+
+ Param10000 = 
+        0,
+        , ,
+        0x0A32, 210, 2,
+        "Logic Status", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10001 = 
+        0,
+        , ,
+        0x0A74, 199, 2,
+        "Feedback", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 2;
+
+ Param10002 = 
+        0,
+        , ,
+        0x0A22, 210, 2,
+        "Logic Command", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 0;
+
+ Param10003 = 
+        0,
+        , ,
+        0x0A60, 199, 2,
+        "Reference", "",
+        "",
+        0, 65535, 0,
+        1, 1, 1, 0,
+        0, 0, 0, 0, 2;
+
+[EnumPar]
+
+
+ Param6 =
+	"Running     ",
+	"Forward     ",
+	"Accelerating",
+	"Decelerating";
+
+ Param13 =
+	"DigIn TBlk 1",
+	"DigIn TBlk 2",
+	"DigIn TBlk 3",
+	"DB Trans On ";
+
+ Param14 =
+	"DigIn TBlk 5",
+	"DigIn TBlk 6";
+
+ Param30 =
+	"English     ",
+	"French      ",
+	"Spanish     ",
+	"Italian     ",
+	"German      ",
+	"Japanese    ",
+	"Portuguese  ",
+	"Chinese     ",
+	"Reserved    ",
+	"Reserved    ",
+	"Korean      ",
+	"Polish      ",
+	"Reserved    ",
+	"Turkish     ",
+	"Czech       ";
+
+ Param39 =
+	"V/Hz        ",
+	"SVC         ",
+	"Economize   ";
+
+ Param40 =
+	"Ready/Idle  ",
+	"Static Tune ",
+	"Rotate Tune ";
+
+ Param45 =
+	"Ramp, CF    ",
+	"Coast, CF   ",
+	"DC Brake, CF",
+	"DCBrkAuto,CF",
+	"Ramp        ",
+	"Coast       ",
+	"DC Brake    ",
+	"DC BrakeAuto",
+	"Ramp+EM B,CF",
+	"Ramp+EM Brk ",
+	"PointStp,CF ",
+	"PointStop   ";
+
+ Param46 =
+	"Keypad      ",
+	"DigIn TrmBlk",
+	"Serial/DSI  ",
+	"Network Opt ";
+
+ Param47 =
+	"Drive Pot   ",
+	"Keypad Freq ",
+	"Serial/DSI  ",
+	"Network Opt ",
+	"0-10V input ",
+	"4-20mA input",
+	"Preset Freq ",
+	"Reserved    ",
+	"MOP         ",
+	"Pulse Input ",
+	"PID1 Output ";
+
+ Param48 =
+	"Keypad      ",
+	"DigIn TrmBlk",
+	"Serial/DSI  ",
+	"Network Opt ";
+
+ Param49 =
+	"Drive Pot   ",
+	"Keypad Freq ",
+	"Serial/DSI  ",
+	"Network Opt ",
+	"0-10V input ",
+	"4-20mA input",
+	"Preset Freq ",
+	"Reserved    ",
+	"MOP         ",
+	"Pulse Input ",
+	"PID1 Output ";
+
+ Param50 =
+	"Keypad      ",
+	"DigIn TrmBlk",
+	"Serial/DSI  ",
+	"Network Opt ";
+
+ Param51 =
+	"Drive Pot   ",
+	"Keypad Freq ",
+	"Serial/DSI  ",
+	"Network Opt ",
+	"0-10V input ",
+	"4-20mA input",
+	"Preset Freq ",
+	"Reserved    ",
+	"MOP         ",
+	"Pulse Input ",
+	"PID1 Output ";
+
+ Param53 =
+	"Ready/Idle  ",
+	"Param Reset ",
+	"Factory Rset",
+	"Power Reset ",
+	"Module Reset";
+
+ Param62 =
+	"Not Used    ",
+	"Speed Ref 2 ",
+	"Speed Ref 3 ",
+	"Start Src 2 ",
+	"Start Src 3 ",
+	"Spd + Strt 2",
+	"Spd + Strt 3",
+	"Reserved    ",
+	"Jog         ",
+	"Jog Forward ",
+	"Jog Reverse ",
+	"Acc/Dec Sel2",
+	"Aux Fault   ",
+	"Clear Fault ",
+	"RampStop,CF ",
+	"CoastStop,CF",
+	"DCInjStop,CF",
+	"MOP Up      ",
+	"MOP Down    ",
+	"Timer Start ",
+	"Counter In  ",
+	"Reset Timer ",
+	"Reset Countr",
+	"Rset Tim&Cnt",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Anlg Invert ",
+	"EM Brk Rlse ",
+	"Acc/Dec Sel3",
+	"Precharge En",
+	"Inertia Dcel",
+	"Sync Enable ",
+	"Traverse Dis",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Force DC    ",
+	"Damper Input",
+	"Purge       ",
+	"Freeze-Fire ",
+	"SW Enable   ",
+	"SherPin1 Dis",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"2-Wire FWD  ",
+	"3-Wire Start";
+
+ Param63 =
+	"Not Used    ",
+	"Speed Ref 2 ",
+	"Speed Ref 3 ",
+	"Start Src 2 ",
+	"Start Src 3 ",
+	"Spd + Strt 2",
+	"Spd + Strt 3",
+	"Reserved    ",
+	"Jog         ",
+	"Jog Forward ",
+	"Jog Reverse ",
+	"Acc/Dec Sel2",
+	"Aux Fault   ",
+	"Clear Fault ",
+	"RampStop,CF ",
+	"CoastStop,CF",
+	"DCInjStop,CF",
+	"MOP Up      ",
+	"MOP Down    ",
+	"Timer Start ",
+	"Counter In  ",
+	"Reset Timer ",
+	"Reset Countr",
+	"Rset Tim&Cnt",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Anlg Invert ",
+	"EM Brk Rlse ",
+	"Acc/Dec Sel3",
+	"Precharge En",
+	"Inertia Dcel",
+	"Sync Enable ",
+	"Traverse Dis",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Force DC    ",
+	"Damper Input",
+	"Purge       ",
+	"Freeze-Fire ",
+	"SW Enable   ",
+	"SherPin1 Dis",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"2-Wire REV  ",
+	"3-Wire Dir  ";
+
+ Param64 =
+	"Edge Trigger",
+	"Level Sense ",
+	"Hi-Spd Edge ",
+	"Momentary   ";
+
+ Param65 =
+	"Not Used    ",
+	"Speed Ref 2 ",
+	"Speed Ref 3 ",
+	"Start Src 2 ",
+	"Start Src 3 ",
+	"Spd + Strt 2",
+	"Spd + Strt 3",
+	"Preset Freq ",
+	"Jog         ",
+	"Jog Forward ",
+	"Jog Reverse ",
+	"Acc/Dec Sel2",
+	"Aux Fault   ",
+	"Clear Fault ",
+	"RampStop,CF ",
+	"CoastStop,CF",
+	"DCInjStop,CF",
+	"MOP Up      ",
+	"MOP Down    ",
+	"Timer Start ",
+	"Counter In  ",
+	"Reset Timer ",
+	"Reset Countr",
+	"Rset Tim&Cnt",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Anlg Invert ",
+	"EM Brk Rlse ",
+	"Acc/Dec Sel3",
+	"Precharge En",
+	"Inertia Dcel",
+	"Sync Enable ",
+	"Traverse Dis",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Force DC    ",
+	"Damper Input",
+	"Purge       ",
+	"Freeze-Fire ",
+	"SW Enable   ",
+	"SherPin1 Dis",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Pulse Train ";
+
+ Param66 =
+	"Not Used    ",
+	"Speed Ref 2 ",
+	"Speed Ref 3 ",
+	"Start Src 2 ",
+	"Start Src 3 ",
+	"Spd + Strt 2",
+	"Spd + Strt 3",
+	"Preset Freq ",
+	"Jog         ",
+	"Jog Forward ",
+	"Jog Reverse ",
+	"Acc/Dec Sel2",
+	"Aux Fault   ",
+	"Clear Fault ",
+	"RampStop,CF ",
+	"CoastStop,CF",
+	"DCInjStop,CF",
+	"MOP Up      ",
+	"MOP Down    ",
+	"Timer Start ",
+	"Counter In  ",
+	"Reset Timer ",
+	"Reset Countr",
+	"Rset Tim&Cnt",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Anlg Invert ",
+	"EM Brk Rlse ",
+	"Acc/Dec Sel3",
+	"Precharge En",
+	"Inertia Dcel",
+	"Sync Enable ",
+	"Traverse Dis",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Force DC    ",
+	"Damper Input",
+	"Purge       ",
+	"Freeze-Fire ",
+	"SW Enable   ",
+	"SherPin1 Dis";
+
+ Param76 =
+	"Ready/Fault ",
+	"At Frequency",
+	"MotorRunning",
+	"Reverse     ",
+	"Motor Overld",
+	"Ramp Reg    ",
+	"Above Freq  ",
+	"Above Cur   ",
+	"Above DCVolt",
+	"Retries Exst",
+	"Above Anlg V",
+	"Above PF Ang",
+	"Anlg In Loss",
+	"ParamControl",
+	"NonRec Fault",
+	"EM Brk Cntrl",
+	"Thermal OL  ",
+	"Amb OverTemp",
+	"Local Active",
+	"Comm Loss   ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Timer Out   ",
+	"Counter Out ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"Reserved    ",
+	"AutoRst Ctdn";
+
+ Param88 =
+	"OutFreq 0-10",
+	"OutCurr 0-10",
+	"OutVolt 0-10",
+	"OutPowr 0-10",
+	"OutTorq 0-10",
+	"TstData 0-10",
+	"Setpnt 0-10 ",
+	"DCVolt 0-10 ",
+	"OutFreq 0-20",
+	"OutCurr 0-20",
+	"OutVolt 0-20",
+	"OutPowr 0-20",
+	"OutTorq 0-20",
+	"TstData 0-20",
+	"Setpnt 0-20 ",
+	"DCVolt 0-20 ",
+	"OutFreq 4-20",
+	"OutCurr 4-20",
+	"OutVolt 4-20",
+	"OutPowr 4-20",
+	"OutTorq 4-20",
+	"TstData 4-20",
+	"Setpnt 4-20 ",
+	"DCVolt 4-20 ";
+
+ Param94 =
+	"Disabled    ",
+	"Fault (F29) ",
+	"Stop        ",
+	"Zero Ref    ",
+	"Min Freq Ref",
+	"Max Freq Ref",
+	"Key Freq Ref",
+	"MOP Freq Ref",
+	"Continu Last";
+
+ Param97 =
+	"Disabled    ",
+	"Fault (F29) ",
+	"Stop        ",
+	"Zero Ref    ",
+	"Min Freq Ref",
+	"Max Freq Ref",
+	"Key Freq Ref",
+	"MOP Freq Ref",
+	"Continu Last";
+
+ Param100 =
+	"Disabled    ",
+	"0-10V Input ",
+	"4-20mA Input",
+	"Command Freq";
+
+ Param121 =
+	"Save        ",
+	"RAM Only    ";
+
+ Param123 =
+	"1200        ",
+	"2400        ",
+	"4800        ",
+	"9600        ",
+	"19,200      ",
+	"38,400      ";
+
+ Param125 =
+	"Fault       ",
+	"Coast Stop  ",
+	"Stop        ",
+	"Continu Last";
+
+ Param127 =
+	"RTU 8-N-1   ",
+	"RTU 8-E-1   ",
+	"RTU 8-O-1   ",
+	"RTU 8-N-2   ",
+	"RTU 8-E-2   ",
+	"RTU 8-O-2   ";
+
+ Param169 =
+	"Disabled    ",
+	"Network Opt ";
+
+ Param175 =
+	"Drive 0     ",
+	"Drive 0-1   ",
+	"Drive 0-2   ",
+	"Drive 0-3   ",
+	"Drive 0-4   ";
+
+ Param390 =
+	"Sync Hold   ",
+	"Sync Ramp   ",
+	"Traverse On ",
+	"Traverse Dec";
+
+ Param392 =
+	"Standard    ",
+	"Enhanced    ";
+
+ Param393 =
+	"Jogging     ",
+	"Flux Braking",
+	"Motor Overld",
+	"AutoRst Ctdn",
+	"DC Braking  ",
+	"At Freq     ",
+	"Auto Tuning ",
+	"EM Braking  ",
+	"Curr Limit  ";
+
+ Param394 =
+	"Rly1 Status ";
+
+ Param428 =
+	"Zero MOP Ref",
+	"Save MOP Ref";
+
+ Param429 =
+	"No preload  ",
+	"Preload     ";
+
+ Param437 =
+	"Disabled    ",
+	"Norml RA Res",
+	"NoProtection",
+	"3% DutyCycle",
+	"4% DutyCycle",
+	"5% DutyCycle",
+	"6% DutyCycle",
+	"7% DutyCycle",
+	"8% DutyCycle",
+	"9% DutyCycle",
+	"10%DutyCycle",
+	"11%DutyCycle",
+	"12%DutyCycle",
+	"13%DutyCycle",
+	"14%DutyCycle",
+	"15%DutyCycle",
+	"16%DutyCycle",
+	"17%DutyCycle",
+	"18%DutyCycle",
+	"19%DutyCycle",
+	"20%DutyCycle",
+	"21%DutyCycle",
+	"22%DutyCycle",
+	"23%DutyCycle",
+	"24%DutyCycle",
+	"25%DutyCycle",
+	"26%DutyCycle",
+	"27%DutyCycle",
+	"28%DutyCycle",
+	"29%DutyCycle",
+	"30%DutyCycle",
+	"31%DutyCycle",
+	"32%DutyCycle",
+	"33%DutyCycle",
+	"34%DutyCycle",
+	"35%DutyCycle",
+	"36%DutyCycle",
+	"37%DutyCycle",
+	"38%DutyCycle",
+	"39%DutyCycle",
+	"40%DutyCycle",
+	"41%DutyCycle",
+	"42%DutyCycle",
+	"43%DutyCycle",
+	"44%DutyCycle",
+	"45%DutyCycle",
+	"46%DutyCycle",
+	"47%DutyCycle",
+	"48%DutyCycle",
+	"49%DutyCycle",
+	"50%DutyCycle",
+	"51%DutyCycle",
+	"52%DutyCycle",
+	"53%DutyCycle",
+	"54%DutyCycle",
+	"55%DutyCycle",
+	"56%DutyCycle",
+	"57%DutyCycle",
+	"58%DutyCycle",
+	"59%DutyCycle",
+	"60%DutyCycle",
+	"61%DutyCycle",
+	"62%DutyCycle",
+	"63%DutyCycle",
+	"64%DutyCycle",
+	"65%DutyCycle",
+	"66%DutyCycle",
+	"67%DutyCycle",
+	"68%DutyCycle",
+	"69%DutyCycle",
+	"70%DutyCycle",
+	"71%DutyCycle",
+	"72%DutyCycle",
+	"73%DutyCycle",
+	"74%DutyCycle",
+	"75%DutyCycle",
+	"76%DutyCycle",
+	"77%DutyCycle",
+	"78%DutyCycle",
+	"79%DutyCycle",
+	"80%DutyCycle",
+	"81%DutyCycle",
+	"82%DutyCycle",
+	"83%DutyCycle",
+	"84%DutyCycle",
+	"85%DutyCycle",
+	"86%DutyCycle",
+	"87%DutyCycle",
+	"88%DutyCycle",
+	"89%DutyCycle",
+	"90%DutyCycle",
+	"91%DutyCycle",
+	"92%DutyCycle",
+	"93%DutyCycle",
+	"94%DutyCycle",
+	"95%DutyCycle",
+	"96%DutyCycle",
+	"97%DutyCycle",
+	"98%DutyCycle",
+	"99%DutyCycle";
+
+ Param458 =
+	"Disabled    ",
+	"TrimOn Pot  ",
+	"TrimOn Keypd",
+	"TrimOn DSI  ",
+	"TrimOn NetOp",
+	"TrimOn 0-10v",
+	"TrimOn 4-20 ",
+	"TrimOn Prset",
+	"TrimOn AnMlt",
+	"TrimOn MOP  ",
+	"TrimOn Pulse";
+
+ Param459 =
+	"PID Setpoint",
+	"Drive Pot   ",
+	"Keypad Freq ",
+	"Serial/DSI  ",
+	"Network Opt ",
+	"0-10V Input ",
+	"4-20mA Input",
+	"Preset Freq ",
+	"AnlgIn Multi",
+	"MOP Freq    ",
+	"Pulse Input ";
+
+ Param460 =
+	"0-10V Input ",
+	"4-20mA Input",
+	"Serial/DSI  ",
+	"Network Opt ",
+	"Pulse Input ";
+
+ Param467 =
+	"Normal      ",
+	"Inverted    ";
+
+ Param492 =
+	"60 Seconds  ",
+	"120 Seconds ",
+	"240 Seconds ",
+	"360 Seconds ",
+	"480 Seconds ",
+	"Flt Disabled";
+
+ Param493 =
+	"No Derate   ",
+	"Min. Derate ",
+	"Max. Derate ";
+
+ Param494 =
+	"Reset       ",
+	"Save        ";
+
+ Param495 =
+	"Disabled    ",
+	"Reduce CLim ",
+	"Reduce PWM  ",
+	"Both-PWM 1st";
+
+ Param530 =
+	"Custom V/Hz ",
+	"30.0, VT    ",
+	"35.0, VT    ",
+	"40.0, VT    ",
+	"45.0, VT    ",
+	"0.0, no IR  ",
+	"0.0         ",
+	"2.5, CT     ",
+	"5.0, CT     ",
+	"7.5, CT     ",
+	"10.0, CT    ",
+	"12.5, CT    ",
+	"15.0, CT    ",
+	"17.5, CT    ",
+	"20.0, CT    ";
+
+ Param535 =
+	"None        ",
+	"Pulse Train ";
+
+ Param540 =
+	"Enabled     ",
+	"Disabled    ";
+
+ Param543 =
+	"Disabled    ",
+	"Enabled     ";
+
+ Param544 =
+	"Rev Enabled ",
+	"Rev Disabled";
+
+ Param545 =
+	"Disabled    ",
+	"Enabled     ";
+
+ Param547 =
+	"Disabled    ",
+	"Electrical  ",
+	"Mechanical  ",
+	"Both        ";
+
+ Param548 =
+	"Coast       ",
+	"Decel       ";
+
+ Param549 =
+	"Disabled    ",
+	"Enabled     ";
+
+ Param550 =
+	"Disabled    ",
+	"Enabled     ";
+
+ Param551 =
+	"Ready/Idle  ",
+	"Reset Fault ",
+	"Clear Buffer";
+
+ Param553 =
+	"Full Lock   ",
+	"Keypad Lock ",
+	"Custom Only ",
+	"KeyPd Custom";
+
+ Param554 =
+	"Normal      ",
+	"55C         ",
+	"60C         ",
+	"65C +Fan Kit",
+	"70C +Fan Kit";
+
+ Param555 =
+	"Ready/Idle  ",
+	"Reset Meters",
+	"Reset Time  ";
+
+ Param556 =
+	"Off         ",
+	"Low Speed   ",
+	"Mid Speed   ",
+	"High Speed  ";
+
+ Param557 =
+	"Disable     ",
+	"Enable      ";
+
+ Param573 =
+	"Jerk Select ",
+	"ZeroSpd Slip";
+
+ Param574 =
+	"Standard    ",
+	"Enhanced    ";
+
+ Param575 =
+	"Disabled    ",
+	"Enabled     ";
+
+ Param661 =
+	"Running     ",
+	"Forward     ",
+	"Accelerating",
+	"Decelerating";
+
+ Param662 =
+	"Running     ",
+	"Forward     ",
+	"Accelerating",
+	"Decelerating";
+
+ Param663 =
+	"Running     ",
+	"Forward     ",
+	"Accelerating",
+	"Decelerating";
+
+ Param664 =
+	"Running     ",
+	"Forward     ",
+	"Accelerating",
+	"Decelerating";
+
+ Param665 =
+	"Running     ",
+	"Forward     ",
+	"Accelerating",
+	"Decelerating";
+
+ Param686 =
+	"Drive 0 Actv",
+	"Drive 1 Actv",
+	"Drive 2 Actv",
+	"Drive 3 Actv",
+	"Drive 4 Actv";
+
+ Param732 = 
+	"Disabled    ",
+	"Network Opt ",
+	"EtherNet/IP ";
+
+ Param737 = 
+	"Switches    ",
+	"Parameters  ";
+
+ Param740 = 
+	"125kbps     ",
+	"250kbps     ",
+	"500kbps     ",
+	"Autobaud    ";
+
+ Param741 = 
+	"125kbps     ",
+	"250kbps     ",
+	"500kbps     ",
+	"Autobauding ";
+
+ Param745 = 
+	"Ready       ",
+	"Reset Module",
+	"Set Defaults";
+
+ Param746 = 
+	"Fault       ",
+	"Stop        ",
+	"Zero Data   ",
+	"Hold Last   ",
+	"Send Flt Cfg";
+
+ Param747 = 
+	"Fault       ",
+	"Stop        ",
+	"Zero Data   ",
+	"Hold Last   ",
+	"Send Flt Cfg";
+
+ Param754 = 
+	"Drive 0 Actv",
+	"Drive 1 Actv",
+	"Drive 2 Actv",
+	"Drive 3 Actv",
+	"Drive 4 Actv";
+
+ Param10000 =
+	"Ready",
+	"Active",
+	"CommandDir",
+	"ActualDir",
+	"Accelerating",
+	"Decelerating",
+	"Reserved_or_ForwdTravel",
+	"Faulted",
+	"AtReference",
+	"CommFreqCnt_or_AtPos",
+	"CommLogicCnt_or_AtHome",
+	"PLock_or_DriveHomed",
+	"DigIn1_or_SyncHold",
+	"DigIn2_or_SyncRamp",
+	"DigIn3_or_TraverseOn",
+	"DigIn4_or_TraverseDecel";
+
+ Param10002 =
+	"Stop",
+	"Start",
+	"Jog",
+	"Clear Faults",
+	"Forward",
+	"Reverse",
+	"ForceKeypad_or_LogicIn1",
+	"MOPInc_or_LogicIn2",
+	"AccelSel1_or_StepSel1",
+	"AccelSel2_or_StepSel2",
+	"DecelSel1_or_StepSel3",
+	"Decel2_or_FindHome",
+	"FreqSel1_or_HoldStep",
+	"FreqSel2_or_PosRedefine",
+	"FreqSel3_or_SyncEnable",
+	"MOPDec_or_TravDisable";
+
+[Groups]
+
+ Group1 =
+	"Basic Display   ",29, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29;
+
+ Group2 =
+	"Basic Program   ",22, 30,31,32,33,34,35,36,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53;
+
+ Group3 =
+	"Terminals       ",28, 62,63,64,65,66,76,77,78,79,80,86,87,88,89,90,91,92,94,95,96,97,98,99,100,101,102,103,104;
+
+ Group4 =
+	"Communications  ",20, 121,123,124,125,126,127,161,162,163,164,165,166,167,168,169,171,172,173,174,175;
+
+ Group5 =
+	"Advanced Display",24, 360,361,362,363,364,365,366,367,368,369,375,376,377,378,379,380,381,382,383,384,390,392,393,394;
+
+ Group6 =
+	"Advanced Program",94, 410,411,412,413,414,415,416,417,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,442,443,444,445,446,447,448,449,450,451,456,457,458,459,460,461,462,463,464,465,466,467,481,482,483,484,486,487,492,493,494,495,496,497,530,531,532,533,534,535,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,567,568,569,570,571,572,573,574,575,576;
+
+ Group7 =
+	"Fault-Diagnostic",61, 604,605,606,607,608,609,610,611,612,613,614,615,621,622,623,624,625,631,632,633,634,635,641,642,643,644,645,651,652,653,654,655,661,662,663,664,665,681,682,686,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,731;
+
+ Group8 =
+	"DeviceNet Module",21, 732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752;
+

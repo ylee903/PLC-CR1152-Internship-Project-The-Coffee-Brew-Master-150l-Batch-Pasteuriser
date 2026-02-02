@@ -1,0 +1,353 @@
+$ EZ-EDS Version 3.11 (Beta, March-29, 2012) Generated Electronic Data Sheet
+
+
+[File]
+        DescText = "PowerFlex 525";
+        CreateDate = 08-22-2014;
+        CreateTime = 12:00:00;
+        ModDate = 08-22-2014;
+        ModTime = 12:00:00;
+        Revision = 1.1;
+        HomeURL = "http://www.ab.com/networks/eds/EN/0001009700090200.eds";
+
+[Device]
+        VendCode = 1;
+        VendName = "Rockwell Automation - Allen-Bradley";
+        ProdType = 0x0097;
+        ProdTypeStr = "HS-DSI to EtherNet/IP";
+        ProdCode = 0x0009;
+        MajRev = 2;
+        MinRev = 1;
+        ProdName = "PowerFlex 525";
+        Catalog = "25B...";
+        Icon = "PF525.ico";
+        1_EDS_AOP_Support = "No";
+
+[Device Classification]
+        Class1 = EtherNetIP;
+        Class2 = 1_RSNetWorx_Adapter;
+        Class3 = 1_RSLinx_CLGateway_Tool;
+
+[Params]
+        Param1 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Input Assembly Size",  $ name
+                "",                     $ units
+                "",                     $ help string
+                8,16,8,                 $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum1 =
+                8,"Sts/Fbk",
+                10,"Sts/Fbk+1DL",
+                12,"Sts/Fbk+2DL",
+                14,"Sts/Fbk+3DL",
+                16,"Sts/Fbk+4DL";
+        Param2 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Output Assembly Size", $ name
+                "",                     $ units
+                "",                     $ help string
+                4,12,4,                 $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum2 =
+                4,"Cmd/Ref",
+                6,"Cmd/Ref+1DL",
+                8,"Cmd/Ref+2DL",
+                10,"Cmd/Ref+3DL",
+                12,"Cmd/Ref+4DL";
+        Param100 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD3,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Reserved",             $ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param101 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Logic Status",         $ name
+                "",                     $ units
+                "Drive Logic Status",   $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param102 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Feedback",             $ name
+                "",                     $ units
+                "Drive Feedback",       $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param103 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "DL In 1",              $ name
+                "",                     $ units
+                "Datalink Input 1",     $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param104 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "DL In 2",              $ name
+                "",                     $ units
+                "Datalink Input 2",     $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param105 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "DL In 3",              $ name
+                "",                     $ units
+                "Datalink Input 3",     $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param106 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "DL In 4",              $ name
+                "",                     $ units
+                "Datalink Input 4",     $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param200 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Logic Command",        $ name
+                "",                     $ units
+                "Drive Logic Command",  $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param201 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Reference",            $ name
+                "",                     $ units
+                "Drive Reference",      $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param202 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "DL Out 1",             $ name
+                "",                     $ units
+                "Datalink Output 1",    $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param203 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "DL Out 2",             $ name
+                "",                     $ units
+                "Datalink Output 2",    $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param204 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "DL Out 3",             $ name
+                "",                     $ units
+                "Datalink Output 3",    $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param205 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD2,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "DL Out 4",             $ name
+                "",                     $ units
+                "Datalink Output 4",    $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+[Assembly]
+        Assem1 =
+                "Input",
+                ,
+                ,
+                0x0000,
+                ,,
+                32,Param100,
+                16,Param101,
+                16,Param102,
+                16,Param103,
+                16,Param104,
+                16,Param105,
+                16,Param106;
+        Assem2 =
+                "Output",
+                ,
+                ,
+                0x0000,
+                ,,
+                16,Param200,
+                16,Param201,
+                16,Param202,
+                16,Param203,
+                16,Param204,
+                16,Param205;
+
+[Connection Manager]
+        Connection1 =                   $ Exclusive Owner
+                0x04010002,             $ trigger & transport
+                                        $   0-15   = supported transport classes (class 1)
+                                        $   16     = trigger: cyclic (1=supported)
+                                        $   17     = trigger: change of state (0=not supported)
+                                        $   18     = trigger: application (0=not supported)
+                                        $   19-23  = trigger: reserved (must be zero)
+                                        $   24     = application type: listen-only (0=not supported)
+                                        $   25     = application type: input-only (0=not supported)
+                                        $   26     = application type: exclusive-owner (1=supported)
+                                        $   27     = application type: redundant-owner (0=not supported)
+                                        $   28-30  = reserved (must be zero)
+                                        $   31     = Direction: Client=0, Server=1 (don't care for classes 0 and 1)
+                0x44640405,             $ point/multicast & priority & realtime format
+                                        $   0      = O->T fixed size (1=supported)
+                                        $   1      = O->T variable size (0=not supported)
+                                        $   2      = T->O fixed size (1=supported)
+                                        $   3      = T->O variable size (0=not supported)
+                                        $   4-5    = O->T number of bytes per slot (obsolete)
+                                        $   6-7    = T->O number of bytes per slot (obsolete)
+                                        $   8-10   = O->T Real time transfer format (4 byte run/idle)
+                                        $   11     = reserved (must be zero)
+                                        $   12-14  = T->O Real time transfer format (4 byte run/idle)
+                                        $   15     = reserved (must be zero)
+                                        $   16     = O->T connection type: Null (0=not supported)
+                                        $   17     = O->T connection type: Multicast (0=not supported)
+                                        $   18     = O->T connection type: Point-to-point (1=supported)
+                                        $   19     = O->T connection type: reserved
+                                        $   20     = T->O connection type: Null (0=not supported)
+                                        $   21     = T->O connection type: Multicast (1=supported)
+                                        $   22     = T->O connection type: Point-to-point (1=supported)
+                                        $   23     = T->O connection type: reserved
+                                        $   24     = O->T priority: Low (0=not supported)
+                                        $   25     = O->T priority: High (0=not supported)
+                                        $   26     = O->T priority: Scheduled (1=supported)
+                                        $   27     = O->T priority: reserved
+                                        $   28     = T->O priority: Low (0=not supported)
+                                        $   29     = T->O priority: High (0=not supported)
+                                        $   30     = T->O priority: Scheduled (1=supported)
+                                        $   31     = T->O priority: reserved
+                ,Param2,Assem2,         $ O->T RPI, size, format
+                ,Param1,Assem1,         $ T->O RPI, size, format
+                ,,                      $ proxy config size, format
+                ,,                      $ target config size, format
+                "Discrete Exclusive Owner",    $ connection name
+                "",                     $ help string
+                "20 04 24 06 2C 02 2C 01";    $ path
+
+[Port]
+        Port1 =
+                TCP,
+                "EtherNet/IP Port",
+                "20 F5 24 01",
+                2;
+
+[Capacity]
+        ConnOverhead = .0;              $ Requires Measurement
+        MaxIOConnections = 1;           $ Max I/O connections
+        MaxMsgConnections = 16;         $ Max Explicit connections
+        MaxConsumersPerMcast = 1;
+
+        TSpec1 = TxRx, 8, 1000;         $ Assume default size
+        TSpec2 = TxRx, 24, 1000;        $ Assume maximum size
+
+[DLR Class]
+        Revision = 2;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[TCP/IP Interface Class]
+        Revision = 2;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Ethernet Link Class]
+        Revision = 3;
+        MaxInst = 2;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+        InterfaceLabel1 = "1";
+        InterfaceLabel2 = "2";
+        InterfaceType1 = 2;             $ 2=Twisted Pair
+        InterfaceType2 = 2;             $ 2=Twisted Pair
+

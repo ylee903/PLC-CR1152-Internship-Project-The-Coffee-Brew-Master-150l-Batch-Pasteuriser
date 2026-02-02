@@ -1,0 +1,4 @@
+In the current case, it was necessary to go to our wired network adapter properties, and set the ip4 protocol to use the ip address " 192.1668.1.100 " and subnet mask " 255.255.255.0 "
+
+
+so that we would be on the same subnet as the plc device.
